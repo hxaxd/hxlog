@@ -73,3 +73,4 @@ git commit --amend
 `git remote rm`删除仓库
 ### 标签
 1. `git tag -l "glob"`列出标签
+2. 
