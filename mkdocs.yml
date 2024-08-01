@@ -22,6 +22,7 @@ nav:
     - 汇编学习环境: 计算机基础/工具/汇编环境.md
     - python环境: 计算机基础/工具/py环境.md  
     - Docker基础: 计算机基础/工具/Docker.md
+    - ssh基础: 计算机基础/工具/ssh.md
   - C:
     - C prime plus:  计算机基础/C/cpp.md
     - C和指针:  计算机基础/C/czz.md
