@@ -20,7 +20,7 @@ alias python="/opt/homebrew/bin/python3"
 alias pip="/opt/homebrew/bin/pip3"
 
 ```
-## IDE
+## IDE与虚拟环境
 推荐使用PyCharm，教育免费  
 在py编程中，虚拟环境无疑是我们要关注的，py原生的虚拟环境工具venv足够使用，但如果目的是使用包进行科学研究，第三方的虚拟环境工具要更加易用
 
