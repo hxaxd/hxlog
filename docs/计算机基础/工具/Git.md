@@ -3,6 +3,7 @@
 介绍简单使用
 
 ## 概念
+
 1. Git是一种分布式版本管理工具，在中央服务器保存所有文件与历史快照的同时，每次建立分支都克隆整个仓库
 2. Git 中所有的数据在存储前都计算校验和，Git 数据库中保存的信息都是以文件内容的SHA-1哈希值来索引
 3. Git 有三种状态modified staged committed对应工作区、暂存区（只是索引）以及 Git 目录
@@ -18,7 +19,9 @@ git config --global credential.helper osxkeychain
 #缓存凭据（自动登录哈哈哈）
 ```
 ## 基本操作
+
 ### 创建，提交，配置
+
 1. `git init`在当前目录建立.git初始化
 7. `git clone <url> name`克隆到当前目录，name可选
 8. `git status`检查文件状态 未跟踪，未修改，已修改，暂存区
@@ -63,17 +66,41 @@ git commit -m 'initial commit'
 git add forgotten_file
 git commit --amend
 ```
-1.  `git reset HEAD name`撤销暂存
+5.  `git reset HEAD name`撤销暂存
 2. `git checkout -- name`用仓库中的版本替换
-### 仓库与分支
-3. `git remote -v`看仓库  
+
+
+### 仓库
+
+1. `git remote -v`看仓库  
 `git remote add <shortname> <url>` 添加一个新的远程 Git 仓库,可以用sname代替该仓库url  
-`git fetch <url`拉取差异，但是不自动合并
+`git fetch <url`拉取差异，但是不自动合并  
 `git pull <url>`并且自动合并
 1. `git push origin master` 推送到某仓库某分支，这是默认的name  
 `git remote show <remote>`看仓库信息  
 `git remote rename`重命名  
 `git remote rm`删除仓库
 ### 标签
+
 1. `git tag -l "glob"`列出标签
-2. 
+2. `git tag -a name -m "message"`创建标签
+3. `git tag -d name`删除标签
+4. `git tag name`创建轻量标签
+5. `git show name`查看标签信息
+6. `git push origin --tags`推送标签
+
+### 别名
+不记录
+
+### 分支
+
+1. `git branch name` 建立分支
+2. `git branch` 列出分支
+3. `git checkout testing` 移动到该分支
+4. `git merge hotfix` 将当前分支和某分支合并
+5. `git banch --merged` 列出已合并的分支
+6. `git branch -d name` 删除分支
+7. `git branch -m old new` 重命名分支
+8. `git checkout -b sf origin/serverfix` 从远程分支创建跟踪并切换到新分支
+9. `git push origin --delete serverfix` 删除远程分支
+10. `git rebase master serverfix` 合并分支(变基)

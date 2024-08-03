@@ -64,7 +64,7 @@ C+OOP？  C with class？
 
 ### 数据库
 
-### linux系统编程
+### unix系统编程
 
 # 算法与人工智能
 
@@ -91,6 +91,8 @@ C+OOP？  C with class？
 ### Rust
 
 ### Golang
+
+### 函数式与Haskell
 
 ### 电子与信号
 
