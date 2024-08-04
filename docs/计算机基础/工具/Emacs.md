@@ -4,10 +4,10 @@
 
 功能键|缩写|对应键盘按键(PC/Mac)
 |:----:|:----:|:----:|
-Control|C|Ctrl / Control
-Meta|M|Alt/Option
-Shift|S|Shift
-Super|s|Win/Command
+|Control|C|Ctrl / Control|
+|Meta|M|Alt/Option|
+|Shift|S|Shift|
+|Super|s|Win/Command|
 
 ```shell
 # 光标移动
