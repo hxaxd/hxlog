@@ -8,6 +8,7 @@ nav:
   - 工具:
     - Markdown: 计算机基础/工具/markdown.md  
     - 基本图形开发环境配置:  计算机基础/工具/基础环境.md
+    - vscode与jetbrains使用:  计算机基础/工具/vscode.md
     - Git与GitHub基本使用: 计算机基础/工具/Git.md
     - linux基础:  计算机基础/工具/linux.md
     - 常见配置文件格式: 计算机基础/工具/数据描述语言.md
@@ -32,16 +33,19 @@ nav:
     - 汇编语言(王爽): 计算机基础/C/8086.md
     - 程序员的自我修养——链接、装载与库: 计算机基础/C/链接.md
   - 软件工程相关:
+    - 计算机程序的构造与解释:  计算机基础/软件工程/函数式.md
     - 大话设计模式:  计算机基础/软件工程/设计模式.md
     - head first面向对象分析与设计:  计算机基础/软件工程/面向对象.md
-    - 代码大全2: 计算机基础/软件工程/cc2.md
     - clean code:  计算机基础/软件工程/cc.md
-    - clean coder: 计算机基础/软件工程/ccr.md
     - 设计模式 可复用面向对象软件的基础: 计算机基础/软件工程/bsj.md
     - 重构 改善既有代码的设计:  计算机基础/软件工程/重构.md
     - 单元测试的艺术:  计算机基础/软件工程/单元测试.md
-    - 人月神话:  计算机基础/软件工程/软件工程.md
+    - 代码大全2: 计算机基础/软件工程/cc2.md
+    - clean coder: 计算机基础/软件工程/ccr.md
+    - 人月神话:  计算机基础/软件工程/人月.md
     - UNIX编程艺术: 计算机基础/软件工程/unix.md
+    - 软件工程: 计算机基础/软件工程/软件工程.md
+    - 敏捷软件开发：原则、模式与实践: 计算机基础/软件工程/敏捷.md
   - C++:
     - C++引言: 计算机基础/C++/C++引言.md
     - C++ prime: 计算机基础/C++/C++ pp.md
@@ -78,6 +82,6 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/HaiXing-s/CShaixinglog
-repo_url: https://github.com/HaiXing-s/CShaixinglog
+      link: https://github.com/hxaxd/hxlog
+repo_url: https://github.com/hxaxd/hxlog
 repo_name: 海星笔记
