@@ -2,7 +2,7 @@
 
 配置在环境配置中
 
-功能键|缩写|对应键盘按键(PC/Mac)
+|功能键|缩写|对应键盘按键(PC/Mac)|
 |:----:|:----:|:----:|
 |Control|C|Ctrl / Control|
 |Meta|M|Alt/Option|
