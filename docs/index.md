@@ -47,7 +47,7 @@
 
 ### C++
 
-C+OOP？  C with class？  
+C+OOP?  C with class?  
 
 ### 软件工程相关
 
