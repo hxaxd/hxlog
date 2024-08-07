@@ -5,7 +5,7 @@ netstat -atunlp all/tcp/ucp/端口号/监听/PID 看网络与对应进程
 curl -I/wget <url>下载
 
 ip 用来显示和操作路由、网络设备、接口等
-ifconfig 传统的网络配置工具，用来显示和设置网络接口的参数
+ifconfig 传统的网络配置工具,用来显示和设置网络接口的参数
 dig 查询DNS
 
 rsync -av 源 obj 同步
@@ -48,16 +48,16 @@ fg num 来指定恢复作业
 
 bg 用于将一个挂起的作业恢复到后台执行
 
-nohub command 持续运行，不随shell而死
+nohub command 持续运行,不随shell而死
 
 kill sign PID   
 
 sign：
-SIGTERM（默认信号，值为 15）：请求进程安全退出。
-SIGKILL（值为 9）：强制立即终止进程，不给予进程清理资源的机会。
-SIGINT（值为 2）：与 Ctrl+C 相同，通常用于中断进程。
-SIGSTOP（值为 19）：暂停进程，直到收到 SIGCONT。
-SIGCONT（值为 18）：继续执行之前被 SIGSTOP 暂停的进程。
+SIGTERM（默认信号,值为 15）：请求进程安全退出 
+SIGKILL（值为 9）：强制立即终止进程,不给予进程清理资源的机会 
+SIGINT（值为 2）：与 Ctrl+C 相同,通常用于中断进程 
+SIGSTOP（值为 19）：暂停进程,直到收到 SIGCONT 
+SIGCONT（值为 18）：继续执行之前被 SIGSTOP 暂停的进程 
 示例
 ```
 ### 文件系统

@@ -1,7 +1,7 @@
 ### 帮助
-面对一个command，你首先要知道它是可执行文件、shell 内置命令还是别名`type command`  
+面对一个command,你首先要知道它是可执行文件、shell 内置命令还是别名`type command`  
 
-用man来查询帮助，不是所有shell都提供info/help，用apropos去查找文档
+用man来查询帮助,不是所有shell都提供info/help,用apropos去查找文档
 
 man代号
 ```shell
@@ -45,9 +45,9 @@ shift+[PD/PU] 翻页
 history n 显示历史
 !command !! !n 执行历史
 
-< 和 > 来重定向输出和输入， | 来重定向管道。 > 会覆盖文件而 >> 在文件末添加  
+< 和 > 来重定向输出和输入, | 来重定向管道  > 会覆盖文件而 >> 在文件末添加  
 <(command) 被视为文件
-command <<EOF 和 EOF 之间的所有内容都会被当作输入传递给 cat，不必使用管道或者临时文件
+command <<EOF 和 EOF 之间的所有内容都会被当作输入传递给 cat,不必使用管道或者临时文件
 
 标准输出 stdout >/>>和标准错误 stderr 2>/2>>  
 
