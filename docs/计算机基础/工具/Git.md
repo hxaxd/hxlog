@@ -6,7 +6,7 @@
 
 1. Git是一种分布式版本管理工具,在中央服务器保存所有文件与历史快照的同时,每次建立分支都克隆整个仓库
 2. Git 中所有的数据在存储前都计算校验和,Git 数据库中保存的信息都是以文件内容的SHA-1哈希值来索引
-3. Git 有三种状态modified staged committed对应工作区、暂存区（只是索引）以及 Git 目录
+3. Git 有三种状态modified staged committed对应工作区、暂存区 (只是索引)以及 Git 目录
 4. ~/.gitconfig 或 ~/.config/git/config 配置文件
 5. 安装完 Git 之后,要做的第一件事就是设置你的用户名和邮件地址 
 ```shell
@@ -16,7 +16,7 @@ git config --global user.name "Your Name Here"
 git config --global user.email "your_email@youremail.com"
 # 设置name&email,注意与仓库那边一致
 git config --global credential.helper osxkeychain
-#缓存凭据（自动登录哈哈哈）
+#缓存凭据 (自动登录哈哈哈)
 ```
 ## 基本操作
 
@@ -36,16 +36,16 @@ git config --global credential.helper osxkeychain
 [abc]匹配任何一个括号中字符,可以用  
 ?只一个任意字符
 ** 表示匹配任意中间目录,如 a/**/z  
-以（/）开头防止递归 以（/）结尾指定目录  
-可以在模式前加上叹号（!）取反
+以 (/)开头防止递归 以 (/)结尾指定目录  
+可以在模式前加上叹号 (!)取反
 1. `git diff`比较工作目录中当前文件和暂存区域快照之间的差异  
 `git diff -staged`将比对已暂存文件与最后一次提交的文件差异
 1. `git commit`将提交修改并调用shell的默认编辑器写提交消息 -a自动add并提交
 ### 撤销
 1.  `git rm name` 删除  
--f 强制删（暂存中）  
+-f 强制删 (暂存中)  
 --cached name 不跟踪但不删  
-支持glob,但注意\转义（因为不是用shell的glob）
+支持glob,但注意\转义 (因为不是用shell的glob)
 1. `git mv `相当于  
 mv README.md README  
 git rm README.md  
@@ -60,7 +60,7 @@ git add README
 --grep  
 -S 添加或删除内容匹配指定字符串  
 相关选项非常多
-1. 修改最后一次提交（仓库里只会有一次）
+1. 修改最后一次提交 (仓库里只会有一次)
 ```bash
 git commit -m 'initial commit'
 git add forgotten_file

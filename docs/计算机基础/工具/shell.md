@@ -82,7 +82,7 @@ ln from obj 硬链接 -s软
 
 file filename 看文件类型
 find 建议用fd代替
-head/tail filename 看文件头尾 tail -f 自动跟随新增（实时监控）
+head/tail filename 看文件头尾 tail -f 自动跟随新增 (实时监控)
 more/less filename 按页看文件
 cat filename读文本文件 -n行号 -s多空行合并
 od filename二进制看文件 -t x/c 16进制/字符

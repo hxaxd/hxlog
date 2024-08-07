@@ -16,7 +16,7 @@ scp remote_username@remote_ip:/path/source_file /path/target_file
 
 不过,更推荐使用vscode的remote-ssh插件
 
-依照[官方文档](https://vscode.github.net.cn/docs/remote/ssh),可以非常简单的使用本地的vscode环境（包含插件）,编辑远程的文件
+依照[官方文档](https://vscode.github.net.cn/docs/remote/ssh),可以非常简单的使用本地的vscode环境 (包含插件),编辑远程的文件
 
 
 ## 免密码登陆

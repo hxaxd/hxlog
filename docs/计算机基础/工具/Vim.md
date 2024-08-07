@@ -37,7 +37,7 @@ o 加一行开始写
 :#,#s/old/new/g   其中 #,# 代表首尾两行的行号 
 :%s/old/new/gc 会找到整个文件中的每个匹配串,并且对每个匹配提示否进行替换
 :! +shell命令
-:w filename 保存（可以保存部分） 
+:w filename 保存 (可以保存部分) 
 ^+w ^+w换窗口
 :n/N 换文件
 :e filename 打开新文件
