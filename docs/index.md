@@ -2,7 +2,7 @@
 
 >本界面我将介绍学习内容的概括,各页面总结学习重点,作为个人笔记,也欢迎各位作为选择书籍与课程的参考
 
->___“只有短命鬼才需要在幼儿园里就学会一切 ”—— Wendy Kaminer 《I'm a Dysfuntiona;You're Dysfunctional》___
+>___"只有短命鬼才需要在幼儿园里就学会一切 "---- Wendy Kaminer 《I'm a Dysfuntiona;You're Dysfunctional》___
 
 # 预备
 
@@ -21,7 +21,7 @@
 
 # 计算机基础
 
->___"一个有纸、笔、橡皮擦并且坚持严格的行为准则的人,实质上就是一台通用图灵机 "—— Alan Mathison Turing___
+>___"一个有纸、笔、橡皮擦并且坚持严格的行为准则的人,实质上就是一台通用图灵机 "---- Alan Mathison Turing___
 
 ### 数学基础
 
