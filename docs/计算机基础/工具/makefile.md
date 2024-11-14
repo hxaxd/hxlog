@@ -4,23 +4,23 @@ GNU make是makefile的一个实现,而Cmake可以跨平台编译makefile
 
 ## makefile
 GNU的make工作时的执行步骤如下：
-1. 读入所有的Makefile  
+- 读入所有的Makefile  
 顺序寻找文件名为 GNUmakefile 、 makefile 和 Makefile 的文件  
 使用多条 -f 或 --file 参数,你可以指定多个makefile
 
-2. 读入被include的其它Makefile  
+- 读入被include的其它Makefile  
 include 变量/文件/通配
 
-3. 初始化文件中的变量
+- 初始化文件中的变量
 
-4. 推导隐式规则,并分析所有规则
+- 推导隐式规则,并分析所有规则
 
-5. 为所有的目标文件创建依赖关系链  
+- 为所有的目标文件创建依赖关系链  
 `VPATH = dir:dir # 指定文件搜寻目录`
 
-6. 根据依赖关系,决定哪些目标要重新生成
+- 根据依赖关系,决定哪些目标要重新生成
 
-7. 执行生成命令  
+- 执行生成命令  
 在命令前面加上-,表示忽略错误
 ### 小心环境变量MAKEFILES
 ### make可以一定程度上的自动推导

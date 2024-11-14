@@ -92,8 +92,8 @@ chown name:group filename 改文件归属 -R递归
 chmod [mode] filename -R递归
 
 mode:
-1. ugoa +-= rwx
-2. xyz r/w/x=4/2/1 x/y/z=u/g/o(r+w+x) 如777
+- ugoa +-= rwx
+- xyz r/w/x=4/2/1 x/y/z=u/g/o(r+w+x) 如777
 
 touch 建立空文件/改时间
 
