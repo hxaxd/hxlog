@@ -34,7 +34,7 @@ jobs:
           # Set build directory
           build-directory: /
           # Set package manager
-          package-manager: pip
+          package-manager: npm
           # Set project name
           project-name: hxlog
           # Set custom domain
