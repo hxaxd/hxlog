@@ -15,8 +15,28 @@ jobs:
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
       
-
-        uses: peaceiris/actions-gh-pages@v3
+  cloudflare_pages_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloudflare Pages Action
+        # You may pin to the exact commit or the version.
+        # uses: kitabisa/cloudflare-pages-action@fbf8507763ac4236605f030c167a16891abd7871
+        uses: kitabisa/cloudflare-pages-action@v1.0.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}publish_dir:./build
-          cname: hxlog.cn  # 将这里替换为你的自定义域名
+          # Set api token
+          api-token: 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
+          # Set account id
+          account-id: hxaxd
+          # Set branch
+          branch: main
+          # Set production branch
+          production-branch: gh-pages
+          # Set build directory
+          build-directory: /
+          # Set package manager
+          package-manager: pip
+          # Set project name
+          project-name: hxlog
+          # Set custom domain
+          custom-domain: hxlog.cn # optional, default is 
+            
