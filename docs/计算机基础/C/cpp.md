@@ -106,14 +106,14 @@ PS:关于复合语句 (块),它的值是最后一个语句的值;但是它需要
 - _Thread_local声明一个对象在每个线程有一个备份
 - 块作用域有自动存储期但static可以让它有静态存储期
 - register声明寄存器变量 (C尽力)
-1- 跨文件使用文件作用域的变量要用extern声明
-1- 函数声明默认带extern
-1- 浮点数内部全是0不一定值为0
-1- 静态数据在一起,自动在一起 (栈),动态分配在一起 (内存堆)
-1- volatile 可由外部改变 (防一手编译器)
-1- restrict 仅由我 (一个指针)改变 (让编译器优化)
-1- _Atomic原子性,同时单一线程访问
-1- 形参中,int* const/restrict name==int name[const/restrict],  
+- 跨文件使用文件作用域的变量要用extern声明
+- 函数声明默认带extern
+- 浮点数内部全是0不一定值为0
+- 静态数据在一起,自动在一起 (栈),动态分配在一起 (内存堆)
+- volatile 可由外部改变 (防一手编译器)
+- restrict 仅由我 (一个指针)改变 (让编译器优化)
+- _Atomic原子性,同时单一线程访问
+- 形参中,int* const/restrict name==int name[const/restrict],  
 int name[static 20]表明name中最少元素数 (给编译器优化)
 
 ## 文件输入/输出
