@@ -21,3 +21,5 @@ vscode安装注意勾选添加快捷方式
 ```python
 print("Hello World!")
 ```
+
+右上角运行即可
