@@ -2,12 +2,6 @@
 
 >___"只有短命鬼才需要在幼儿园里就学会一切 "---- Wendy Kaminer 《I'm a Dysfuntiona;You're Dysfunctional》___
 
-# 预备
-
-### 设备选购
-
-### windows使用
-
 # 计算机科学
 
 >___"一个有纸、笔、橡皮擦并且坚持严格的行为准则的人,实质上就是一台通用图灵机 "---- Alan Mathison Turing___
