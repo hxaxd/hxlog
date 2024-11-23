@@ -2,11 +2,9 @@
 
 >___"只有短命鬼才需要在幼儿园里就学会一切 "---- Wendy Kaminer 《I'm a Dysfuntiona;You're Dysfunctional》___
 
-# 计算机科学
+## 计算机基础
 
 >___"一个有纸、笔、橡皮擦并且坚持严格的行为准则的人,实质上就是一台通用图灵机 "---- Alan Mathison Turing___
-
-## 计算机基础
 
 ### 理论基础
 微积分+线代+概统+离散+组合+计算理论+信息论+数字设计
@@ -26,38 +24,27 @@
 ### 操作系统
 
 
-## 进阶方向
+## 方向
 
 ### 并发编程
-
-### 编程语言理论
-
-lisp+haskell
 
 ### 软件工程相关
 
 ### 计算机网络
 
-### 数据库
+### 数据库概念与应用
 
-### 编程语言
+### UNIX/Linux系统与网络编程
+
+### 通识编程语言
 
 Rust  
 Golang  
 Python  
-C#  
-JaveScript  
-Jave  
-TypeScript  
+JaveScript/TypeScript    
+
 
 ### 分布式
 
 
 
-# 计算机技术
-
-### UNIX/LINUX编程
-
-### 数据处理与科学计算
-
-### 图形处理

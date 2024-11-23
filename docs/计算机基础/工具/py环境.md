@@ -24,7 +24,9 @@ alias pip="/opt/homebrew/bin/pip3"
 推荐使用PyCharm,教育免费  
 在py编程中,虚拟环境无疑是我们要关注的,py原生的虚拟环境工具venv足够使用,但如果目的是使用包进行科学研究,第三方的虚拟环境工具要更加易用
 
-不过pycharm支持虚拟环境的快速切换等操作,因此对我足够使用
+比如conda
+
+pycharm支持虚拟环境的快速切换等操作
 ```bash
 python -m venv dir #建立
 source ENV_DIR/bin/activate #激活
@@ -34,4 +36,4 @@ deactivate #退出
 ```
 以上操作pycharm也都可以图形化
 
-不过觉得还是不够重的话,那么conda就是你的选择
+

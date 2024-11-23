@@ -30,7 +30,7 @@ git config --global credential.helper osxkeychain
 未跟踪文件 ??  
 新加到暂存区A  
 修改过M 左栏指明了暂存区的状态,右栏指明了工作区的状态包括MM/ M/M 三种
-1- .gitignore 指明需要忽视的文件  
+- .gitignore 指明需要忽视的文件  
 标准的glob模式匹配,递归地应用在整个工作区中  
 *任意  
 [abc]匹配任何一个括号中字符,可以用  
