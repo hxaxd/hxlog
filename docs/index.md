@@ -39,9 +39,7 @@
 ### 通识编程语言
 
 Rust  
-Golang  
-Python  
-JaveScript/TypeScript    
+Python   
 
 
 ### 分布式
