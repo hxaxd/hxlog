@@ -100,8 +100,12 @@ Visual Studio
 
 ## pyCharm
 
-###
+### 编辑器
 
+代码
+
+-`opt+enter` 快速修复
+- 
 
 ## CLion
 
