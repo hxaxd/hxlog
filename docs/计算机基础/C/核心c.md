@@ -149,13 +149,13 @@ int name[static 20]表明name中最少元素数 (给编译器优化)
 - getchar putchar不是函数是宏
 - ungetc是退回不是写入
 - 宏作用域是本文件
-1- `#if defined (AAA)==#ifdef AAA`
-1- _Generic(object,type:value,default)泛型选择 
-1- inline fun ();
-1- _Noreturn type fun ()宣告不返回主调函数
-1- atexit()将函数指针记录,exit()会逆序调用这些函数
-1- assert(bool)若为假则打印err,停止程序 _Static_assert(bool,char*)若为假则打印字符串,无法编译
-1- typt fun (type i,int parmN,...){  
+- `#if defined (AAA)==#ifdef AAA`
+- _Generic(object,type:value,default)泛型选择 
+- inline fun ();
+- _Noreturn type fun ()宣告不返回主调函数
+- atexit()将函数指针记录,exit()会逆序调用这些函数
+- assert(bool)若为假则打印err,停止程序 _Static_assert(bool,char*)若为假则打印字符串,无法编译
+- typt fun (type i,int parmN,...){  
     va_list ap;  
     va_start(ap,parmN);  
     type j=va_arg(ap,type);  

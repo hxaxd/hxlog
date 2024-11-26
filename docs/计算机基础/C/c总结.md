@@ -25,10 +25,10 @@ a[i]==i[a]==*(a+i)
 - C++11没有初始化器,restric,VLA,伸缩型数组成员,可变数量参数的宏
 - c标记名与变量名可以重复,c++不行
 - molloc在C++中必须强制类型转换
-1- C警告将const指针赋给普通指针,C++error/C++可以用const整型声明数组大小
-1- C++可以type(name)强制类型转换
-1- C++不可调用main()现在C也不行了
-1- C可以char[3]="asd"
+- C警告将const指针赋给普通指针,C++error/C++可以用const整型声明数组大小
+- C++可以type(name)强制类型转换
+- C++不可调用main()现在C也不行了
+- C可以char[3]="asd"
 
 以上受时间影响,仅供参考
 

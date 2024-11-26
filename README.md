@@ -1,1 +1,1 @@
-[个人笔记](hxlog.cn)
+[个人笔记](http://hxlog.cn)

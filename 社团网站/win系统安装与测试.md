@@ -9,7 +9,7 @@
 
 参考资料:
 
-- [win系统安装与测试](http://www.elyw.cn/?p=124)
+- [win系统安装与测试](https://www.bilibili.com/video/BV17HBxYuES8/)
  
 ### 系统镜像
 
