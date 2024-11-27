@@ -1,6 +1,3 @@
-
-
-
 ## 指针  
    
 就c语言的数组与函数,我有一定理解,总结如下  
@@ -12,7 +9,7 @@ a[i]==i[a]==*(a+i)
 |值/name|值|函数地址|首元素地址|
 |&|变量地址|函数地址|数组地址|
 |*|值所代表的地址上的值|函数地址|首元素|
-|sizeof|type'size|no|type'size*length|
+|sizeof|type'size|no|(sizeof type)*length|
 
 ## c与c++
 - C++认为int fun()==int fun(void),C认为只是省略了
