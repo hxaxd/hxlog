@@ -224,4 +224,43 @@ reinterpret_cast<type>(expression); // 通常为运算对象的位模式提供�
 
 #### try语句块和异常处理
 
+- throw表达式引发异常
+- try catch处理异常
+- 异常类传递信息
+- 异常类都有一个what成员函数,返回const char*
+- 嵌套的try块中,异常如果没有对应catch则会继续向外层try块查找,全没有则转到terminate函数(终止程序)
+- throw后的语句不会被执行,因此要考虑保证异常安全(如释放资源)
+
+```c++
+try {
+    // 程序代码
+    if(err){
+        throw errClass(info); // 抛出匿名异常对象
+    }
+} catch (errClass e1) {
+    // 处理e1的代码
+} catch (errClass e2) {
+    // 处理e2的代码
+} catch (errClass e3) {
+    // 处理e3的代码
+
+// exception头文件
+throw exception(); // 无信息
+
+// stdexcept头文件
+throw runtime_error("info"); // 只有运行时才能检查的错误
+throw logic_error("info"); // 程序逻辑错误
+throw domain_error("info"); // 参数对应的结果值不存在
+throw invalid_argument("info"); // 无效参数
+throw length_error("info"); // 试图创建一个超出该类型最大长度的对象
+throw out_of_range("info"); // 使用一个超出有效范围的值
+throw range_error("info"); // 结果超出合理范围
+throw overflow_error("info"); // 算术运算上溢
+throw underflow_error("info"); // 算术运算下溢
+```
+
+### 函数
+
+#### 函数基础
+
 - 
