@@ -45,7 +45,8 @@ nav:
     - 现代C++语言核心特性解析: 计算机基础/C++/现代C++.md
     - STL源码剖析: 计算机基础/C++/STL源码.md
     - C++性能优化: 计算机基础/C++/C++性能优化.md
-    - 框架: 计算机基础/C++/框架.md
+    - C++标准库: 计算机基础/C++/C++标准库.md
+    - 框架与包管理: 计算机基础/C++/框架.md
   - 算法:
     - 大话数据结构:  计算机基础/算法/数据结构.md
     - 算法: 计算机基础/算法/基础算法.md
@@ -87,15 +88,30 @@ nav:
   - 计算机网络:
     - 自顶向下方法: 进阶/计算机网络/自顶向下方法.md
     - TCP/IP详解: 进阶/计算机网络/TCPIP.md
+    - 图解http: 进阶/计算机网络/图解http.md
   - 数据库:
     - 数据库系统概念: 进阶/数据库/数据库系统概念.md
     - SQL必知必会: 进阶/数据库/SQL必知必会.md
     - mysql技术内幕: 进阶/数据库/mysql技术内幕.md
+    - 高性能mysql: 进阶/数据库/
+    - redis实战: 进阶/数据库/redis实战.md
+    - redis设计与实现: 进阶/数据库/redis设计与实现.md
+    - RabbitMQ实战: 进阶/数据库/RabbitMQ实战.md
+    - kafka: 进阶/数据库/kafka.md
+  - UNIX/Linux系统与网络编程:
+    - linux内核设计与实现: 进阶/UNIX&Linux系统与网络编程/linux内核设计与实现.md
+    - 深入理解linux内核: 进阶/UNIX&Linux系统与网络编程/深入理解linux内核.md
+    - UNIX环境高级编程: 进阶/UNIX&Linux系统与网络编程/UNIX环境高级编程.md
+    - UNIX网络编程: 进阶/UNIX&Linux系统与网络编程/
+    - Linux高性能服务器编程: 进阶/UNIX&Linux系统与网络编程/Linux高性能服务器编程.md
+    - Linux多线程服务端编程: 进阶/UNIX&Linux系统与网络编程/Linux多线程服务端编程.md
   - 通识编程语言:
     - rust程序设计: 进阶/rust/rust.md
     - Python编程 从入门到实践: 进阶/python/Python.md
   - 分布式:
     - 分布式系统: 进阶/分布式/分布式系统.md
+    - 数据密集型应用系统设计: 进阶/分布式/数据密集型应用系统设计.md
+    - RPC: 进阶/分布式/RPC.md
 
 
   
