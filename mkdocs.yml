@@ -53,7 +53,7 @@ nav:
     - 剑指offer: 计算机基础/算法/剑指offer.md
     - 编程珠玑与其续: 计算机基础/算法/编程珠玑.md
     - 编程之美: 计算机基础/算法/编程之美.md
-    - 程序员面试金典:  进阶/软件工程/程序员面试.md
+    - 程序员面试金典:  计算机基础/算法/程序员面试.md
     - 题解:  计算机基础/算法/题解.md
     - 算法竞赛:  计算机基础/算法/算法竞赛.md
   - 计算机系统:
@@ -95,11 +95,11 @@ nav:
     - 高性能mysql: 进阶/数据库/高性能mysql.md
     - redis实战: 进阶/数据库/redis实战.md
     - redis设计与实现: 进阶/数据库/redis设计与实现.md
-  - UNIX/Linux系统与网络编程:
+  - UNIX&Linux系统与网络编程:
     - linux内核设计与实现: 进阶/UNIX&Linux系统与网络编程/linux内核设计与实现.md
     - 深入理解linux内核: 进阶/UNIX&Linux系统与网络编程/深入理解linux内核.md
     - UNIX环境高级编程: 进阶/UNIX&Linux系统与网络编程/UNIX环境高级编程.md
-    - UNIX网络编程: 进阶/UNIX&Linux系统与网络编程/
+    - UNIX网络编程: 进阶/UNIX&Linux系统与网络编程/UNIX网络编程.md
     - Linux高性能服务器编程: 进阶/UNIX&Linux系统与网络编程/Linux高性能服务器编程.md
     - Linux多线程服务端编程: 进阶/UNIX&Linux系统与网络编程/Linux多线程服务端编程.md
   - 通识编程语言:
