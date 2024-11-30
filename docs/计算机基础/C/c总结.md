@@ -18,11 +18,11 @@ a[i]==i[a]==*(a+i)
 - C++const变量可以初始化const,C不行
 - C++严格使用枚举,C将之认定为整型
 - C++原生宽字符,C原生复数
-- C++内联函数不可重复定义
 - C++11没有初始化器,restric,VLA,伸缩型数组成员,可变数量参数的宏
 - c标记名与变量名可以重复,c++不行
 - molloc在C++中必须强制类型转换
-- C警告将const指针赋给普通指针,C++error/C++可以用const整型声明数组大小
+- C警告将const指针赋给普通指针,C++error
+- C++可以用const整型声明数组大小
 - C++可以type(name)强制类型转换
 - C++不可调用main()现在C也不行了
 - C可以char[3]="asd"
@@ -52,7 +52,8 @@ a[i]==i[a]==*(a+i)
 
 ## 增补
 
-
-- sizeof(void)=1 (gcc)    
-sizeof("hello")=6  
-sizeof('a')=sizeof(int)  
+```C
+sizeof(void)=1 (gcc)   
+sizeof("hello")=6
+sizeof('a')=sizeof(int)
+```
