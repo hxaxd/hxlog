@@ -11,7 +11,7 @@
 
 - [win快捷键](https://support.microsoft.com/zh-cn/windows/windows-%E7%9A%84%E9%94%AE%E7%9B%98%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F-dcc61a57-8ff0-cffe-9796-cb9706c75eec)
 - [官方帮助](https://support.microsoft.com/zh-cn/windows)
-- [win系统基本使用]()
+- [win系统基本使用](https://www.bilibili.com/video/BV1RwidY1Eot/)
 
 ### 快捷键
 
@@ -170,5 +170,5 @@ softcnkiller可以显示软件的发行商,这有助于你发现目标,不过相
 
 了解如何使用无图形化界面应用即可
 
-2024 005 1 2024/12/4
+2024 005 1 2024/12/5
 
