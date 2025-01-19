@@ -4,3 +4,7 @@
 markdown是需要相应的编辑器的,vscode的插件markdown all in one是有效的,当然,你可以自由选择   
 markdown是支持插入图片的,但这需要将图片上传到一个网址,也就是图床,[picgo](https://www.bilibili.com/video/BV1Cs4y1C7yF/)是一个图床的图形化接口,加上一个图床平台,例如[smms](https://sm.ms)就可以满足你  
 好的,现在你可以写笔记了
+
+[GFM](https://gfm.docschina.org/zh-hans/%E4%BB%8B%E7%BB%8D.html)是markdown的规范的方言
+
+它指导了一种规范的解析方式

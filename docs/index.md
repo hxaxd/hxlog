@@ -1,13 +1,12 @@
 >本界面我将介绍学习内容的概括,各页面总结学习重点,作为个人笔记,也欢迎各位作为选择书籍与课程的参考
 
->___"只有短命鬼才需要在幼儿园里就学会一切 "---- Wendy Kaminer 《I'm a Dysfuntiona;You're Dysfunctional》___
+>___"只有短命鬼才需要在幼儿园里就学会一切 "---- Wendy Kaminer 《I'm a Dysfunctions;You're Dysfunctional》___
 
 ## 计算机基础
 
 >___"一个有纸、笔、橡皮擦并且坚持严格的行为准则的人,实质上就是一台通用图灵机 "---- Alan Mathison Turing___
 
 ### 理论基础
-微积分+线代+概统+离散+组合+计算理论+信息论+数字设计
 
 ### 工具
 
@@ -37,8 +36,5 @@
 ### UNIX/Linux系统与网络编程
 
 ### 通识编程语言
-
-Rust  
-Python   
 
 ### 分布式
