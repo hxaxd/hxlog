@@ -8,12 +8,12 @@
 - 头中可以放css/js
 - p/h1-h6/ul/ol/li/em/strong
 - span/div
-- main存放每个页面独有的内容。
-- article包围的内容即一篇文章，与页面其他部分无关
-- section 与 article 类似，但 section 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块
-- aside包含一些间接信息（术语条目、作者简介、相关链接，等等）
-- header 是简介形式的内容。如果它是 body 的子元素，那么就是网站的全局页眉。如果它是article 或section 的子元素，那么它是这些部分特有的页眉
-- nav 包含页面主导航功能。其中不应包含二级链接等内容
+- main存放每个页面独有的内容 
+- article包围的内容即一篇文章,与页面其他部分无关
+- section 与 article 类似,但 section 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块
+- aside包含一些间接信息（术语条目、作者简介、相关链接,等等）
+- header 是简介形式的内容 如果它是 body 的子元素,那么就是网站的全局页眉 如果它是article 或section 的子元素,那么它是这些部分特有的页眉
+- nav 包含页面主导航功能 其中不应包含二级链接等内容
 - footer 包含了页面的页脚部分
 - br 换行/hr分界线
 - img(图片) 属性 src/alt/width/height
@@ -55,11 +55,11 @@
       <!-- 本站统一的导航栏 -->
       <ul>
         <li><a href="#">主页</a></li>
-        <!-- 共 n 个导航栏项目，省略…… -->
+        <!-- 共 n 个导航栏项目,省略…… -->
       </ul>
 
       <form>
-        <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
+        <!-- 搜索栏是站点内导航的一个非线性的方式  -->
         <input type="search" name="q" placeholder="要搜索的内容" />
         <input type="submit" value="搜索" />
       </form>
@@ -68,7 +68,7 @@
     <main>
       <!-- 网页主体内容 -->
       <article>
-        <!-- 此处包含一个 article（一篇文章），内容略…… -->
+        <!-- 此处包含一个 article（一篇文章）,内容略…… -->
       </article>
 
       <aside>
@@ -76,7 +76,7 @@
         <h2>相关链接</h2>
         <ul>
           <li><a href="#">这是一个超链接</a></li>
-          <!-- 侧边栏有 n 个超链接，略略略…… -->
+          <!-- 侧边栏有 n 个超链接,略略略…… -->
         </ul>
       </aside>
     </main>
@@ -100,11 +100,56 @@
 ### JS
 
 - script一下
-- 
+- 基础典中典
+- DOM 文档对象模型 获取HTML标签转化为js对象进行操作 其中提供大量方法,包括事件监听
+- ES6 新特性 补全+糖+异步(异常+可以等待)+对象代理(重载对象操作)
+- 模块 范式:ESM(引擎)/CJS(Node)
+- ESM export/import mname(本文件自己定)/{name,name}(与模块中保持一致) from path导入导出
+- CJS module.exports/require('path')导入导出
 
 ### TS
 
+- 类型: 类型检查/注解/断言/联合
+- string/number/boolean/null/undefined
+- 数组/元祖(结构体)/枚举/模版
+- 函数重载/类继承/访问权/多态/装饰器
+
+### 网络请求
+
+- ajax 依赖对象,指定请求方式/地址/参数/回调函数(响应事件)
+- axios 封装的ajax,async一个函数,await请求,进行操作 拦截器可以统一操作请求
+- fetch 基于promise的异步请求 `fetch(url).then(res=>res.json()).then(data=>console.log(data))`
+
 ### VUE
+
+- VUE实例 指定作用标签
+- 声明响应式数据(数据与显示同步) `date(){name:value}` 方法 `methods:{fun(){}}`
+- HTML中用插值表达式`<p>{{name}}</p>` name亦可是表达式/方法/...
+- 计算属性 `computed:{fun(){}}` 缓存函数结果
+- 侦听器 `watch:{name(newValue,oldValue){}}`
+- 指令 `v-text="..."` v-html解析标签内容 v-for v-if v-show 
+- `v-bind:属性:` 绑定属性 
+- `v-on:opt="fun"` 绑定事件
+- `v-model="fun"` 双向绑定,如输入框
+- 可以加修饰符,如`v-model.trim="fun"`
+
+#### VUE CLI
+
+- `npm i @vue/cli -g`
+- `vue create`
+- VUE 提供server build lint等功能
+- 一个.vue文件是一个单文件组件,包含结构,样式,逻辑
+- 组件会export一个对象,import组件会用对象构造一个VUE
+- 除根组件App.vue外,不需要el属性,挂载在哪取决于父组件
+- 子组件的props属性接受父数据
+- 子在方法中调用this.$emit('事件名',数据),在父中使用子标签时加上@事件="fun",fun是父中方法,fun(数据)
+- 子结构中slot标签显示父调用标签时标签中文本(可以是html)
+- <template v-slot:name> 内容 </template> 指定 slot name="..."
+
+#### VUE Router
+
+- 
+  
 
 ## 后端常识
 
@@ -137,19 +182,19 @@
 
 ### nginx
 
-nginx是一个开源的WEB服务器，它可以作为负载均衡器,缓存服务器,反向代理服务器等角色使用
+nginx是一个开源的WEB服务器,它可以作为负载均衡器,缓存服务器,反向代理服务器等角色使用
 
-反向代理的作用是将客户端的请求转发给后端的服务器，然后将后端服务器的响应返回给客户端。这样可以实现负载均衡(多个实际服务器)，并隐藏后端服务器的IP地址
+反向代理的作用是将客户端的请求转发给后端的服务器,然后将后端服务器的响应返回给客户端 这样可以实现负载均衡(多个实际服务器),并隐藏后端服务器的IP地址
 
 负载均衡的算法:
 - 轮询法（默认方法)每个请求按时间顺序逐一分配到不同的后端服务器
 - weight权重模式（加权轮询)用于后端服务器性能不均情况
-- ip_hash：上述方式存在重定位另一个服务器，其登录信息将会丢失的问题  
+- ip_hash:上述方式存在重定位另一个服务器,其登录信息将会丢失的问题  
 我们可以采用ip_hash指令解决这个问题,每个请求按访问ip的hash结果分配固定访问一个后端服务器
 
 nginx可以实现动静分离
 
-配置文件:conf目录下的nginx.conf，默认配置的nginx监听的端口为80
+配置文件:conf目录下的nginx.conf,默认配置的nginx监听的端口为80
 
 常用命令
 
@@ -158,7 +203,7 @@ cd /usr/local/nginx/sbin/
 ./nginx  启动
 ./nginx -s stop  停止
 ./nginx -s quit  安全退出
-./nginx -s reload  重新加载配置文件  如果我们修改了配置文件，就需要重新加载。
+./nginx -s reload  重新加载配置文件  如果我们修改了配置文件,就需要重新加载 
 ps aux|grep nginx  查看nginx进程
 ```
 
@@ -172,7 +217,7 @@ ps aux|grep nginx  查看nginx进程
 # 查询端口是否开放firewall-cmd --query-port=8080/tcp
 # 开放80端口firewall-cmd --permanent --add-port=80/tcp
 # 移除端口firewall-cmd --permanent --remove-port=8080/tcp#重启防火墙(修改配置后要重启防火墙)firewall-cmd --reload
-# 参数解释1、firwall-cmd：是Linux提供的操作firewall的一个工具；2、--permanent：表示设置为持久；3、--add-port：标识添加的端口；
+# 参数解释1、firwall-cmd:是Linux提供的操作firewall的一个工具;2、--permanent:表示设置为持久;3、--add-port:标识添加的端口;
 
 ```
 
@@ -226,24 +271,24 @@ ps aux|grep nginx  查看nginx进程
 写一个Dockerfile文件,然后使用`docker build -t name .`来构建镜像
 
 ```Dockerfile
-FROM	指定基础镜像，用于后续的指令构建。
-MAINTAINER	指定Dockerfile的作者/维护者。（已弃用，推荐使用LABEL指令）
-LABEL	添加镜像的元数据，使用键值对的形式。
-RUN	在构建过程中在镜像中执行命令。
-CMD	指定容器创建时的默认命令。（可以被覆盖）
-ENTRYPOINT	设置容器创建时的主要命令。（不可被覆盖）
-EXPOSE	声明容器运行时监听的特定网络端口。
-ENV	在容器内部设置环境变量。
-ADD	将文件、目录或远程URL复制到镜像中。
-COPY	将文件或目录复制到镜像中。
-VOLUME	为容器创建挂载点或声明卷。
-WORKDIR	设置后续指令的工作目录。
-USER	指定后续指令的用户上下文。
-ARG	定义在构建过程中传递给构建器的变量，可使用 "docker build" 命令设置。
-ONBUILD	当该镜像被用作另一个构建过程的基础时，添加触发器。
-STOPSIGNAL	设置发送给容器以退出的系统调用信号。
-HEALTHCHECK	定义周期性检查容器健康状态的命令。
-SHELL	覆盖Docker中默认的shell，用于RUN、CMD和ENTRYPOINT指令。
+FROM	指定基础镜像,用于后续的指令构建 
+MAINTAINER	指定Dockerfile的作者/维护者 （已弃用,推荐使用LABEL指令）
+LABEL	添加镜像的元数据,使用键值对的形式 
+RUN	在构建过程中在镜像中执行命令 
+CMD	指定容器创建时的默认命令 （可以被覆盖）
+ENTRYPOINT	设置容器创建时的主要命令 （不可被覆盖）
+EXPOSE	声明容器运行时监听的特定网络端口 
+ENV	在容器内部设置环境变量 
+ADD	将文件、目录或远程URL复制到镜像中 
+COPY	将文件或目录复制到镜像中 
+VOLUME	为容器创建挂载点或声明卷 
+WORKDIR	设置后续指令的工作目录 
+USER	指定后续指令的用户上下文 
+ARG	定义在构建过程中传递给构建器的变量,可使用 "docker build" 命令设置 
+ONBUILD	当该镜像被用作另一个构建过程的基础时,添加触发器 
+STOPSIGNAL	设置发送给容器以退出的系统调用信号 
+HEALTHCHECK	定义周期性检查容器健康状态的命令 
+SHELL	覆盖Docker中默认的shell,用于RUN、CMD和ENTRYPOINT指令 
 ```
 
 ## k8s

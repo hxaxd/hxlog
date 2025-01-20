@@ -5,7 +5,7 @@ ssh是一种协议,最常用的实现是openssh,内置在大部分linux系统下
 ~/.ssh存放SSH客户端相关配置和密钥文件
 - 生成authorized_keys文件用于存放相关的主机和密钥信息
 - sshd_config（server配置文件）
-- ssh_config（client配置文件）。
+- ssh_config（client配置文件） 
 
 
 ```bash
@@ -19,11 +19,11 @@ ssh hostname
 # 将本地机器中的文件复制到远程机器中
 scp /path/local_file remote_username@remote_ip:/path/target_file
 
-# 添加-r参数，递归拷贝目录
+# 添加-r参数,递归拷贝目录
 scp -r /path/local_directory remote_username@remote_ip:/path/target_directory
 
 # 将远程机器中的文件复制到本地机器中
-# 远程拷贝多个文件的命令形式比较繁琐，就不写了
+# 远程拷贝多个文件的命令形式比较繁琐,就不写了
 scp remote_username@remote_ip:/path/source_file /path/target_file
 
 # 指定使用23号端口
