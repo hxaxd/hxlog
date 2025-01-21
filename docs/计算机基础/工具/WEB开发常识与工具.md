@@ -1,3 +1,6 @@
+- [吴悠讲编程](https://space.bilibili.com/482867012) 前端 5
+- [GeekHour](https://space.bilibili.com/102438649) 大量现代工具 5 
+
 ## 前端常识
 
 ### [HTML](https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
@@ -120,7 +123,7 @@
 - axios 封装的ajax,async一个函数,await请求,进行操作 拦截器可以统一操作请求
 - fetch 基于promise的异步请求 `fetch(url).then(res=>res.json()).then(data=>console.log(data))`
 
-### VUE
+### VUE2
 
 - VUE实例 指定作用标签
 - 声明响应式数据(数据与显示同步) `date(){name:value}` 方法 `methods:{fun(){}}`
@@ -136,20 +139,29 @@
 #### VUE CLI
 
 - `npm i @vue/cli -g`
-- `vue create`
+- `vue-create`
 - VUE 提供server build lint等功能
 - 一个.vue文件是一个单文件组件,包含结构,样式,逻辑
 - 组件会export一个对象,import组件会用对象构造一个VUE
 - 除根组件App.vue外,不需要el属性,挂载在哪取决于父组件
-- 子组件的props属性接受父数据
-- 子在方法中调用this.$emit('事件名',数据),在父中使用子标签时加上@事件="fun",fun是父中方法,fun(数据)
-- 子结构中slot标签显示父调用标签时标签中文本(可以是html)
-- <template v-slot:name> 内容 </template> 指定 slot name="..."
 
-#### VUE Router
+#### VUE Router与VUEX
 
-- 
-  
+- Router检查url变化,实现单页面应用
+- Vuex全局的状态管理工具,代替父子组件间的复杂通信
+- vue create是选上,会生成相应文件夹,在main中引入,作为VUE实例的参数
+- 在相应文件夹中进行配置,使用方法查看官网
+
+#### VUE3
+
+- 组合式api,原本VUE功能集中(响应式数据,计算属性),造成了逻辑功能分散,VUE3可以将VUE功能随地使用
+- 因此原本new vue->create(vue).mount()
+- `<script setup> </script>`代替一大坨,原本集中声明的可以使用相应方法
+
+#### Pinia
+
+- 简化的复合直觉的VUEX
+- 就想写一个组件一样,但全局
 
 ## 后端常识
 
@@ -293,7 +305,40 @@ SHELL	覆盖Docker中默认的shell,用于RUN、CMD和ENTRYPOINT指令
 
 ## k8s
 
+### 组件
+
+- Node即是一台服务器,可以是物理机也可以是虚拟机,集群中有许多Node
+- Pod运行在Node上,是一组容器的集合,一个Pod中所有的容器共享网络和存储资源(k8s的最小调度单元)
+- 最佳实践是在Pod中运行一个应用(纯辅助可以放一起,如日志系统)
+- Service是一组Pod的抽象,提供了负载均衡和服务发现的功能(类似反向代理)
+- Service分内部(集群内访问)和外部(集群外访问)
+- 群外访问可以依赖Ingress规定转发规则
+- ConfigMap是一组键值对的集合,用于存储应用程序的配置信息
+- secret是一种特殊的ConfigMap,用于存储敏感信息,如数据库密码等(Base64)
+- volume是一个持久化存储卷,用于存储Pod中的持久化数据
+- Deployment是一种资源对象,用于定义Pod的副本数和更新策略
+- StatefulSet是一种资源对象,用于定义有状态应用的副本数和更新策略
+
+### 架构
+
+- 主从架构(Master/Worker)
+- 一个Worker-Node中有kubelet,kube-proxy和容器运行时三个组件,其中kubelet负责管理Pod,kube-proxy负责网络代理/负载均衡
+- Master-Node中有kube-apiserver,kube-controller-manager,kube-scheduler,etcd,四个组件
+- kube-apiserver负责接收和响应API请求
+- kube-controller-manager负责维护集群状态(监控)
+- kube-scheduler负责调度Pod到Node
+- etcd是一个分布式的键值存储系统,用于存储集群的元数据
+
+### 本地部署
+
+- minikube是一个轻量级的Kubernetes发行版,用于在本地开发和测试Kubernetes集群(创建一个VM,部署一个单Node的Kubernetes集群)
+- multipass是一个虚拟机管理工具,用于创建和管理虚拟机,创建多个虚拟机作为Node,即可用k3s创建集群
+- kubectl是一个命令行工具,用于与Kubernetes集群交互
+- 命令看文档
+
 ## CI/CD
+
+### devops 
 
 ## 服务器运维管理工具
 

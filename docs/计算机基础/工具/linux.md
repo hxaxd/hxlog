@@ -1,5 +1,7 @@
-# 鸟哥的Linux私房菜&[linux101](https://101.lug.ustc.edu.cn/)
- 太详细了,给我看破防了,有很多系统底层的命令不记录
+- 鸟哥的Linux私房菜 太全,运维看 2
+- [linux101](https://101.lug.ustc.edu.cn/) 不错,有点少 4
+
+## linux
 
 - 一切都是文件
 - dev/sd[a-z]表示不同的sata/usb存储硬件

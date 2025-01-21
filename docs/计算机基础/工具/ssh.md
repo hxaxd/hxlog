@@ -1,3 +1,5 @@
+- [ssh](https://blog.csdn.net/m0_51720581/article/details/131796669) 精简 4
+
 利用ssh远程开发是我们要学习的技能之一,本文只记录客户端操作
 
 ssh是一种协议,最常用的实现是openssh,内置在大部分linux系统下,现在的windows也可以选择添加了

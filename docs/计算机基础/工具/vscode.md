@@ -1,3 +1,6 @@
+- [vsc官方文档](https://code.visualstudio.com/Docs) 结构不好 3
+- [clion官方文档](https://www.jetbrains.com/help/clion/installation-guide.html) 同上 3
+
 > 将时间花在你的开发环境上是最节省时间的举措
 
 ## vscode

@@ -1,3 +1,5 @@
+- C++ Primer 大而不全(也行CPP没有全),但叙述顺序很棒 5
+
 ### 开始
 
 - istream类的对象`cin`,ostream类的对象`cout cerr clog`,用处顾名思义

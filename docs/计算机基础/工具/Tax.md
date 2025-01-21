@@ -1,4 +1,4 @@
-[教程](https://zhuanlan.zhihu.com/p/456055339)
+- [教程](https://zhuanlan.zhihu.com/p/456055339) 够用 4
 
 ### 配置环境
 

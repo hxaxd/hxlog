@@ -1,5 +1,5 @@
-
-- [翁恺老师的C语言课](https://www.bilibili.com/video/BV1XZ4y1S7e1/?spm_id_from=333.788.recommend_more_video.0&vd_source=2499dec4a6dc444afbb1ff9583447bca)
+- [翁恺老师的C语言课](https://www.bilibili.com/video/BV1XZ4y1S7e1) 神作 5
+- c prime plus 大而全 5
 
 首先以一个轻松的视频课程了解c,然后     
 

@@ -1,3 +1,5 @@
+- [命令行的艺术](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md) 指导向 4
+
 ### 文本基本操作
 - sort file/stdio 排序 -n/r/f/k 按数字大小/反向排/忽略大小写/排每行的第n个字段
 - uniq file 去重复打印 -d/c 只显示重复/显示行重复次数
