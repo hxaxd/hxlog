@@ -119,7 +119,7 @@
 
 ### 网络请求
 
-- ajax 依赖对象,指定请求方式/地址/参数/回调函数(响应事件)
+- ajax 依赖XML...对象,指定请求方式/地址/参数/回调函数(响应事件)
 - axios 封装的ajax,async一个函数,await请求,进行操作 拦截器可以统一操作请求
 - fetch 基于promise的异步请求 `fetch(url).then(res=>res.json()).then(data=>console.log(data))`
 
