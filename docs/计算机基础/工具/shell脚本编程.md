@@ -221,5 +221,5 @@ EOF
 # 或者使用以下包含文件代码
 # source ./test1.sh
 
-echo "菜鸟教程官网地址：$url"
+echo "菜鸟教程官网地址:$url"
 ```
