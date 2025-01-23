@@ -6,8 +6,8 @@ ssh是一种协议,最常用的实现是openssh,内置在大部分linux系统下
 
 ~/.ssh存放SSH客户端相关配置和密钥文件
 - 生成authorized_keys文件用于存放相关的主机和密钥信息
-- sshd_config（server配置文件）
-- ssh_config（client配置文件） 
+- sshd_config(server配置文件)
+- ssh_config(client配置文件) 
 
 
 ```bash
