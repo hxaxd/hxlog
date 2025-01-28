@@ -260,3 +260,65 @@ EXECUTE 存储过程名(参数1,参数2,...); -- 执行存储过程
 ```
 
 - PS: 存储过程的创建与编写依赖数据库,在MySQL必知必会中讨论吧
+
+### 管理事务处理
+
+- 事务处理确保了要么一组SQL语句(事务)要么完全执行,要么完全不执行(原子性)
+
+```sql
+START TRANSACTION; -- 开始事务
+
+-- 一系列SQL语句
+
+ROLLBACK; -- 回滚到事务开始前的状态
+
+COMMIT; -- 提交事务,注意提交后不可回滚
+
+SAVEPOINT 保存点名; -- 设置保存点
+ROLLBACK TO 保存点名; -- 回滚到保存点
+-- 可以部分回滚
+
+-- 结合流程控制语句使用
+```
+
+### 使用游标
+
+- 游标是用于可视化操作的数据库对象,WEB应用中不常用
+
+```sql
+DECLARE 游标名 CURSOR FOR SELECT 列名1,列名2,... FROM 表名; -- 声明游标,此时还未查询
+
+OPEN CURSOR 游标名; -- 打开游标
+
+FETCH CURSOR 游标名 INTO 变量1,变量2,...; -- 从游标中获取一行数据到变量中
+
+CLOSE CURSOR 游标名; -- 关闭游标
+```
+
+### 高级SQL特性
+
+#### 约束
+
+```sql
+列名 数据类型 NOT NULL DEFAULT 值 PRIMARY KEY -- 声明主键
+
+列名1 数据类型 NOT NULL DEFAULT 值 REFERENCES 表名(列名2) -- 声明外键
+
+列名 数据类型 NOT NULL DEFAULT 值 UNIQUE -- 声明唯一键(不可作外键)
+
+列名 数据类型 NOT NULL DEFAULT 值 CHECK(真值表达式) -- 检查约束
+
+ALTER TABLE 表名 ADD CONSTRAINT 约束; -- 添加约束
+```
+
+#### 索引
+
+- 索引是对表以其中一列值进行排序的缓存(便于快速查找)
+
+```sql
+CREATE INDEX 索引名 ON 表名(列名); -- 创建索引
+```
+
+#### 触发器
+
+- 触发器是特殊的存储过程,当它依托的表发生特定操作(插入/更新)时,会自动执行

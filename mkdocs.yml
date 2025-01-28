@@ -8,6 +8,7 @@ nav:
     - 编译原理: 计算机基础/理论基础/龙.md
     - 计算机程序的构造和解释: 计算机基础/理论基础/SICP.md
   - 工具:
+    - 常用快捷键:  计算机基础/工具/快捷键.md
     - Markdown: 计算机基础/工具/markdown.md  
     - 基本图形开发环境配置:  计算机基础/工具/基础环境.md
     - vscode与jetbrains使用:  计算机基础/工具/vscode.md
@@ -104,6 +105,8 @@ nav:
     - golang: 进阶/golang/golang.md
     - Haskell: 进阶/Haskell/Haskell.md
     - Lua: 进阶/lua/lua.md
+    - Zig: 进阶/Zig/Zig.md 
+    - Nim: 进阶/Nim/Nim.md
   - 分布式:
     - 分布式系统: 进阶/分布式/分布式系统.md
     - 数据密集型应用系统设计: 进阶/分布式/数据密集型应用系统设计.md
