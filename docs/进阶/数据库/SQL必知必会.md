@@ -42,6 +42,7 @@ SELECT 列名1 FROM 表名 ORDER BY 列名2 DESC,列名3 DESC -- 降序,修饰�
 
 - 使用`AND`,`OR`,`NOT`联结修饰真值
 - `AND`的优先级高于`OR`
+- 数值与`NULL`不存在`!=`关系
 
 ```sql
 SELECT 列名1 FROM 表名 WHERE 真值表达式 ORDER BY 列名2,列名3 -- 应在ORDER BY前面
@@ -99,6 +100,7 @@ SELECT Concat(列名1,列名2,'666') AS 别名 FROM 表名 -- 便于客户端引
 ### 汇总数据
 
 - 使用聚集函数(有统一的定义)
+- MySQL支持许多"标准偏差"聚集函数
 
 ```sql
 AVG()
@@ -114,7 +116,6 @@ SUM() -- 字面意思,都会忽略NULL
 - `NULL`值会被单独分组
 - `GROUP BY`不可跟随聚集函数,除此之外的`SELECT`列都需要出现在`GROUP BY`中
 - `HAVING`几乎与`WHERE`相同,但它过滤的对象是分组后的结果(比如聚集函数)
-
 
 ```sql
 SELECT 列名1,列名2 FROM 表名 GROUP BY 列名1,列名2; -- 分组后,列名1,列名2相同的行被分为一组
@@ -186,18 +187,24 @@ SELECT 列名1,列名2 FROM 表名1 LEFT OUTER JOIN 表名2 ON 真值表达式; 
 
 ### 插入数据
 
+- 一次插入多行优于多条单行插入
+
 ```sql
 INSERT INTO 表名 VALUES(值1,值2,...); -- 按次序插入,跳过应指明NULL
 
 INSERT INTO 表名(列名1,列名2,...) VALUES(值1,值2,...); -- 更安全,省略的列会被置为NULL(若表定义,为默认值)
 
-INSERT INTO 表名(列名1,列名2,...) SELECT 列名1,列名2,... FROM 表名2; -- 从表2中选择行插入表1,仅此时INSERT插入了多行
+INSERT INTO 表名(列名1,列名2,...) VALUES(值1,值2,...),VALUES(值3,值4,...); -- 插入多行,MySQL支持
+
+INSERT INTO 表名(列名1,列名2,...) SELECT 列名1,列名2,... FROM 表名2; -- 从表2中选择行插入表1
 -- 注意被插入表必须存在
 
 SELECT * INTO 表名1 FROM 表名2; -- 从表2中导出表1,注意表1不存在
 ```
 
 ### 更新与删除数据
+
+- `UPDATE IGNORE`可以强制更新多行的`UPDATE`语句不保持原子性
 
 ```sql
 UPDATE 表名 SET 列名1=值1,列名2=值2,... WHERE 真值表达式; -- 更新列,不指定WHERE则更新所有行(小心!)
@@ -217,6 +224,8 @@ CREATE TABLE 表名(列名1 数据类型 NOT NULL,列名2 数据类型,...); -- 
 列名 数据类型 NOT NULL DEFAULT 值; -- 指定默认值
 
 ALTER TABLE 表名 ADD 列名 数据类型; -- 添加列,ALTER TABLE还支持许多操作,但强依赖环境,不建议使用
+
+RENAME TABLE 旧表名 TO 新表名; -- 重命名表
 
 DROP TABLE 表名; -- 删除表
 ```
@@ -243,6 +252,7 @@ DROP TABLE 表名; -- 删除表
 
 - 视图是虚拟的表,其内容是查询的结果,视图本身不包含数据
 - 视图的功能(如可否依靠视图写入)由数据库决定
+  - MySQL支持基于视图的修改,但要求视图有完整的表的基数据(不含聚集函数/分组/...SQL语句)
 - 视图会保存查询的顺序
 
 ```sql
@@ -284,6 +294,7 @@ ROLLBACK TO 保存点名; -- 回滚到保存点
 ### 使用游标
 
 - 游标是用于可视化操作的数据库对象,WEB应用中不常用
+- MySQL的游标只能用于存储过程
 
 ```sql
 DECLARE 游标名 CURSOR FOR SELECT 列名1,列名2,... FROM 表名; -- 声明游标,此时还未查询

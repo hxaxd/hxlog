@@ -22,6 +22,7 @@ patch -R -pn还原
 ```
 
 ### 正则
+
 ```
 .匹配任意单个字符,不能匹配空行
 [] 匹配指定范围内的任意单个字符
@@ -42,6 +43,7 @@ patch -R -pn还原
 ^  行首锚定,用于模式的最左侧
 $  行尾锚定,用于模式的最右侧 
 ```
+
 ```bash
 grep [option] pattern file
 -A<显示行数>:除了显示符合范本样式的那一列之外,并显示该行之后的内容 
@@ -54,6 +56,7 @@ grep [option] pattern file
 'c'  
 filename  
 ```
+
 ```bash
 sed [options] '[地址定界] command' file(s)
 
