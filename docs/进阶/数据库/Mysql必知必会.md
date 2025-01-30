@@ -158,4 +158,92 @@ SHOW COLLATION; -- 查看所有校对顺序
 CREATE TABLE 表名(列名1 数据类型 DEFAULT CHARACTER SET 字符集 COLLATE 校对顺序,列名2 数据类型)DEFAULT CHARACTER SET 字符集 COLLATE 校对顺序; -- 指定列/全局字符集和校对顺序
 ```
 
-### 
+### 用户管理
+
+- MySQL中有一个mysql数据库,其中有一个user表,它的user列存储了所有用户账号
+- 用户名后可以加上`@主机名`指定用户的主机名,如果省略则表示用户可以从所有主机访问
+
+```sql
+CREATE USER 用户名 IDENTIFIED BY '密码'; -- 创建用户
+RENAME USER 用户名 TO 新用户名; -- 重命名用户
+DROP USER 用户名; -- 删除用户
+
+SHOW GRANTS FOR 用户名; -- 查看用户的权限
+
+GRANT 权限1,权限2 ON 数据库.表 TO 用户名; -- 授予用户权限
+REVOKE ALL 权限 FROM 用户名; -- 撤销用户权限
+-- 可以是ALL或ON ...
+
+SET PASSWORD FOR 用户名=密码; -- 设置用户密码
+```
+
+### 数据库维护
+
+- 备份的最佳方式还是使用备份工具
+- `data`目录中有许多日志文件
+  - `hostname.err`错误日志
+  - `hostname.log`查询日志
+  - `hostname-slow.log`慢语句日志(用于记录执行时间超过long_query_time的语句)
+  - `hostname-bin`二进制日志
+  - `FLUSH LOGS`刷新缓存
+  - 文件名可以指定
+
+```sql
+FLUSH TABLES; -- 刷新缓存
+
+BACKUP TABLE 表名 TO '文件路径'; -- 备份表
+SELECT * FROM 表名 INTO OUTFILE '文件路径'; -- 备份表
+RESTORE TABLE 表名 FROM '文件路径'; -- 恢复表
+
+ANALYZE TABLE 表名; -- 分析表状态
+-- 类似的有许多,不列举
+```
+
+### 性能优化
+
+- 调整内存分配/缓冲区大小等
+- 禁止低性能进程
+- 编写高效的SQL语句(`EXPLAIN`可以查看`SELECT`语句的执行细节)
+- 使用存储过程/触发器
+- 建立正确的表结构
+- 导入数据时关闭自动提交/索引
+- 使用索引强化读性能(但它会降低写性能)
+- `UNION` > `OR`
+
+#### 数据类型
+
+- 字符串
+  - `CHAR(1~255)`定长字符串
+  - `TEXT`变长字符串(最大64K)
+  - `MEDIUMTEXT`变长字符串(最大16k)
+  - `LONGTEXT`变长字符串(最大4G)
+  - `TINYTEXT`变长字符串(最大255字节)
+  - `VARCHAR(n)`变长字符串(最大n字节,n最大为255)
+  - `ENUM`接受一个预定义的集合(最多64K个值)中的一个值
+  - `SET`接受一个预定义的集合(最多64个值)中的一个子集
+  - 变长串慢且不支持索引
+- 整数
+  - `BIT`1~64位
+  - `TINYINT`1字节
+  - `SMALLINT`2字节
+  - `MEDIUMINT`3字节
+  - `INT`4字节
+  - `BIGINT`8字节
+  - 前加`UNSIGNED`为同字节无符号整数
+- 浮点数
+  - `REAL`4字节
+  - `FLOAT`单精度
+  - `DOUBLE`双精度
+  - `DECIMAL(总位数,小数位数)`可变精度
+- 布尔
+  - `BOOL`1bit
+- 日期
+  - `DATE`YYYY-MM-DD (1000-9999)
+  - `TIME`HH:MM:SS
+  - `DATETIME`日期和时间
+  - `TIMESTAMP`小范围的`DATETIME`
+  - `YEAR`2位(1970-2069) 4位(1901-2155)
+- 二进制
+  - `BLOB`64K
+  - `MEDIUMBLOB`16M
+  - `LONGBLOB`4G
