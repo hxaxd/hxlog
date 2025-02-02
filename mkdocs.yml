@@ -117,11 +117,6 @@ nav:
     - 后端开发基本框架: 进阶/python/后端开发基本框架.md
     - 数据处理与计算框架: 进阶/python/数据处理与计算框架.md
 
-
-
-  
-
-
 site_name: 海星笔记
 theme:
   icon:
