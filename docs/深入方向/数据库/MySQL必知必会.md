@@ -1,12 +1,16 @@
+# MySQL使用基础
+
+## 参考资料
+
 - MySQL必知必会 跟前作几乎一样,单拿出来比前作强,因为有MySQL内容 4
 
 ### 使用MySQL
 
-- MySQL除了本体外,还提供了命令行工具,图形化工具(不好用),以及数据库管理工具
-  - 当然,本质上都是SQL语句
-- 想要使用这些工具必须连接到MySQL,需要指定
-  - 主机名(本地是localhost)
-  - 端口号(默认是3306)
+- MySQL 除了本体外,还提供了命令行工具,图形化工具(不好用),以及数据库管理工具
+  - 当然,本质上都是 SQL 语句
+- 想要使用这些工具必须连接到 MySQL 需要指定
+  - 主机名(本地是 localhost )
+  - 端口号(默认是 3306 )
   - 用户名(数据库可以创建不同权限的用户)
   - 密码(可以没有)
 - 下面列举一些图形化界面工具使用的语句(全没用!!!)
@@ -33,15 +37,15 @@ SHOW WARNINGS; -- 查看警告信息
 ### 用正则表达式进行搜索
 
 - `REGEXP`的使用看起来很像`LIKE`,但请注意`LIKE`匹配的是整个字符串,而`REGEXP`匹配的是模式(子串)
-- MySQL的正则表达式不区分大小写
+- MySQL 的正则表达式不区分大小写
 - `^`指定后一个模式匹配字符串的开始
 - `$`指定前一个模式匹配字符串的结束
 - `*`匹配任意长度的字符
 - `+`匹配至少一个字符
-- `?`匹配0或1个字符
-- `{n}`匹配n个`{n}`前面的模式
-- `{n,}`匹配至少n个`{n,}`前面的模式
-- `{n,m}`匹配n到m个`{n,m}`前面的模式
+- `?`匹配零或一个字符
+- `{n}`匹配 n 个`{n}`前面的模式
+- `{n,}`匹配至少 n 个`{n,}`前面的模式
+- `{n,m}`匹配 n 到 m 个`{n,m}`前面的模式
 - `[]`匹配任意字符中的一个
 - `[^]`匹配任意字符中的一个(取反)
 - `|`逻辑或,连接两个模式
@@ -62,7 +66,7 @@ SELECT * FROM table_name WHERE column_name REGEXP '正则表达式'; -- 正则�
 
 ### 全文本搜索
 
-- MySQL支持多种数据引擎,其中MyISAM支持全文本搜索,更常用的InnoDB不支持
+- MySQL支持多种数据引擎,其中 MyISAM 支持全文本搜索,更常用的 InnoDB 不支持
 - 没用的东西(FOR WEB DEV)
 
 ```sql
@@ -77,20 +81,20 @@ SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('搜索关键字'); --
 SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('搜索关键字' WITH QUERY EXPANSION);  -- 将结果作为关键字搜索
 
 -- 布尔搜索
-SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('+搜索关键字1 -搜索关键字2' IN BOOLEAN MODE); -- 搜索关键字1出现,搜索关键字2不出现
+SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('+搜索关键字1 -搜索关键字2' IN BOOLEAN MODE); -- 搜索 关键字1 出现,搜索 关键字2 不出现
 -- 有许多符号可以使用
 ```
 
 ### 创建和操纵表
 
 - 表间可以混用引擎,但不支持外键
-- MYISAM支持全文本搜索,InnoDB支持事务处理,MEMORY是存在于内存中的MYISAM
+- MYISAM 支持全文本搜索 InnoDB 支持事务处理, MEMORY 是存在于内存中的 MYISAM
 
 ```sql
 CREATE TABLE 表名(列名1 数据类型 NOT NULL,列名2 数据类型,...)ENGINE=InnoDB; -- 指定引擎
 
-列名 数据类型 NOT NULL AUTO_INCREMENT; -- 指定自增列(行间值唯一)(有个全局变量,每次自增1作为默认值)
--- 但也可以在INSERT中指定(相当于改变变量值,以此自增)
+列名 数据类型 NOT NULL AUTO_INCREMENT; -- 指定自增列(行间值唯一)(有个全局变量,每次自增 1 作为默认值)
+-- 但也可以在 INSERT 中指定(相当于改变变量值,以此自增)
 
 SELECT last_insert_id(); -- 获取最后一次插入的自增列的值
 ```
@@ -104,7 +108,7 @@ SELECT last_insert_id(); -- 获取最后一次插入的自增列的值
   - `SELECT @变量名;`查看值
 
 ```sql
-CREATE PROCEDURE 存储过程名(IN 参数1 数据类型,OUT 参数2 数据类型,INOUT ...)COMMENT '注释' -- 会在SHOW PROCEDURE STATUS中显示
+CREATE PROCEDURE 存储过程名(IN 参数1 数据类型,OUT 参数2 数据类型,INOUT ...)COMMENT '注释' -- 会在 SHOW PROCEDURE STATUS 中显示
 BEGIN
     -- 存储过程体
     IF 条件 THEN
@@ -126,8 +130,8 @@ SHOW PROCEDURE STATUS; -- 查看所有存储过程的信息
   - `BEFORE`触发器如果执行失败,则事件不会发生
 
 ```sql
-CREATE TRIGGER 触发器名 BEFORE/AFTER INSERT/UPDATE/DELETE ON 表名 FOR EACH ROW 行为 -- FOR EACH ROW表示行为针对每一行INSERT/UPDATE/DELETE
--- 行为可以是语句/BEGIN END块
+CREATE TRIGGER 触发器名 BEFORE/AFTER INSERT/UPDATE/DELETE ON 表名 FOR EACH ROW 行为 -- FOR EACH ROW 表示行为针对每一行 INSERT/UPDATE/DELETE
+-- 行为可以是语句/ BEGIN END 块
 
 DROP TRIGGER 触发器名; -- 删除触发器
 ```
@@ -148,7 +152,7 @@ DROP TRIGGER 触发器名; -- 删除触发器
 
 ### 字符集与校对顺序
 
-- Cast()/Convert()可以临时转换字符串字符集
+- Cast()/Convert() 可以临时转换字符串字符集
 
 ```sql
 SHOW CHARACTER SET; -- 查看所有字符集
@@ -160,7 +164,7 @@ CREATE TABLE 表名(列名1 数据类型 DEFAULT CHARACTER SET 字符集 COLLATE
 
 ### 用户管理
 
-- MySQL中有一个mysql数据库,其中有一个user表,它的user列存储了所有用户账号
+- MySQL 中有一个 mysql 数据库,其中有一个 user 表,它的 user 列存储了所有用户账号
 - 用户名后可以加上`@主机名`指定用户的主机名,如果省略则表示用户可以从所有主机访问
 
 ```sql
@@ -183,7 +187,7 @@ SET PASSWORD FOR 用户名=密码; -- 设置用户密码
 - `data`目录中有许多日志文件
   - `hostname.err`错误日志
   - `hostname.log`查询日志
-  - `hostname-slow.log`慢语句日志(用于记录执行时间超过long_query_time的语句)
+  - `hostname-slow.log`慢语句日志(用于记录执行时间超过 long_query_time 的语句)
   - `hostname-bin`二进制日志
   - `FLUSH LOGS`刷新缓存
   - 文件名可以指定
@@ -203,7 +207,7 @@ ANALYZE TABLE 表名; -- 分析表状态
 
 - 调整内存分配/缓冲区大小等
 - 禁止低性能进程
-- 编写高效的SQL语句(`EXPLAIN`可以查看`SELECT`语句的执行细节)
+- 编写高效的 SQL 语句(`EXPLAIN`可以查看`SELECT`语句的执行细节)
 - 使用存储过程/触发器
 - 建立正确的表结构
 - 导入数据时关闭自动提交/索引
@@ -214,35 +218,35 @@ ANALYZE TABLE 表名; -- 分析表状态
 
 - 字符串
   - `CHAR(1~255)`定长字符串
-  - `TEXT`变长字符串(最大64K)
-  - `MEDIUMTEXT`变长字符串(最大16k)
-  - `LONGTEXT`变长字符串(最大4G)
-  - `TINYTEXT`变长字符串(最大255字节)
-  - `VARCHAR(n)`变长字符串(最大n字节,n最大为255)
-  - `ENUM`接受一个预定义的集合(最多64K个值)中的一个值
-  - `SET`接受一个预定义的集合(最多64个值)中的一个子集
+  - `TEXT`变长字符串(最大 64K )
+  - `MEDIUMTEXT`变长字符串(最大 16k )
+  - `LONGTEXT`变长字符串(最大 4G )
+  - `TINYTEXT`变长字符串(最大 255字节 )
+  - `VARCHAR(n)`变长字符串(最大 n字节 , n 最大为 255 )
+  - `ENUM`接受一个预定义的集合(最多 64K 个值)中的一个值
+  - `SET`接受一个预定义的集合(最多 64 个值)中的一个子集
   - 变长串慢且不支持索引
 - 整数
-  - `BIT`1~64位
-  - `TINYINT`1字节
-  - `SMALLINT`2字节
-  - `MEDIUMINT`3字节
-  - `INT`4字节
-  - `BIGINT`8字节
+  - `BIT` 1~64 位
+  - `TINYINT` 1 字节
+  - `SMALLINT` 2 字节
+  - `MEDIUMINT` 3 字节
+  - `INT` 4 字节
+  - `BIGINT` 8 字节
   - 前加`UNSIGNED`为同字节无符号整数
 - 浮点数
-  - `REAL`4字节
+  - `REAL` 4字节
   - `FLOAT`单精度
   - `DOUBLE`双精度
   - `DECIMAL(总位数,小数位数)`可变精度
 - 布尔
-  - `BOOL`1bit
+  - `BOOL` 1bit
 - 日期
-  - `DATE`YYYY-MM-DD (1000-9999)
+  - `DATE`YYY-MM-DD (1000-9999)
   - `TIME`HH:MM:SS
   - `DATETIME`日期和时间
   - `TIMESTAMP`小范围的`DATETIME`
-  - `YEAR`2位(1970-2069) 4位(1901-2155)
+  - `YEAR` 2位 (1970-2069) 4位 (1901-2155)
 - 二进制
   - `BLOB`64K
   - `MEDIUMBLOB`16M
