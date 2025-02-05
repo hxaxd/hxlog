@@ -45,7 +45,7 @@ nav:
     - C专家编程: 计算机基础/C/C专家编程.md
     - C语言重点总结: 计算机基础/C/C语言重点总结.md
   - C++语言:
-   - C++Prime: 计算机基础/C++/C++Prime.md
+    - C++Prime: 计算机基础/C++/C++Prime.md
     - EffectiveC++: 计算机基础/C++/EffectiveC++.md
     - MoreEffectiveC++: 计算机基础/C++/MoreEffectiveC++.md
     - EffectiveModernC++: 计算机基础/C++/EffectiveModernC++.md
