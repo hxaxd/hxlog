@@ -93,8 +93,8 @@ SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('+搜索关键字1 -�
 ```sql
 CREATE TABLE 表名(列名1 数据类型 NOT NULL,列名2 数据类型,...)ENGINE=InnoDB; -- 指定引擎
 
-列名 数据类型 NOT NULL AUTO_INCREMENT; -- 指定自增列(行间值唯一)(有个全局变量,每次自增 1 作为默认值)
--- 但也可以在 INSERT 中指定(相当于改变变量值,以此自增)
+列名 数据类型 NOT NULL AUTO_INCREMENT; -- 指定自增列 (行间值唯一)(有个全局变量,每次自增 1 作为默认值)
+-- 但也可以在 INSERT 中指定 (相当于改变变量值,以此自增)
 
 SELECT last_insert_id(); -- 获取最后一次插入的自增列的值
 ```
@@ -131,7 +131,7 @@ SHOW PROCEDURE STATUS; -- 查看所有存储过程的信息
 
 ```sql
 CREATE TRIGGER 触发器名 BEFORE/AFTER INSERT/UPDATE/DELETE ON 表名 FOR EACH ROW 行为 -- FOR EACH ROW 表示行为针对每一行 INSERT/UPDATE/DELETE
--- 行为可以是语句/ BEGIN END 块
+-- 行为可以是语句 / BEGIN END 块
 
 DROP TRIGGER 触发器名; -- 删除触发器
 ```
@@ -222,12 +222,12 @@ ANALYZE TABLE 表名; -- 分析表状态
   * `MEDIUMTEXT` 变长字符串 (最大 16k)
   * `LONGTEXT` 变长字符串 (最大 4G)
   * `TINYTEXT` 变长字符串 (最大 255 字节)
-  * `VARCHAR(n)` 变长字符串 (最大 n 字节 , n 最大为 255)
+  * `VARCHAR(n)` 变长字符串 (最大 n 字节, n 最大为 255)
   * `ENUM` 接受一个预定义的集合 (最多 64K 个值) 中的一个值
   * `SET` 接受一个预定义的集合 (最多 64 个值) 中的一个子集
   * 变长串慢且不支持索引
 * 整数
-  * `BIT` 1\~64 位
+  * `BIT` 1~64 位
   * `TINYINT` 1 字节
   * `SMALLINT` 2 字节
   * `MEDIUMINT` 3 字节
