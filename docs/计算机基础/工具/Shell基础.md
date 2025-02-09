@@ -1,7 +1,7 @@
 - [命令行的艺术](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md) 指导向 4
 
 ### 帮助
-面对一个command,你首先要知道它是可执行文件、shell 内置命令还是别名`type command`  
+面对一个command,你首先要知道它是可执行文件 shell 内置命令还是别名`type command`  
 
 用man来查询帮助,不是所有shell都提供info/help,用apropos去查找文档
 

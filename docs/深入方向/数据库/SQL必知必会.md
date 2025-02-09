@@ -139,7 +139,7 @@ SELECT 列名1 FROM 表名1 WHERE 列名2 IN (SELECT 列名3 FROM 表名2 WHERE 
 SELECT 列名1 (SELECT 计算字段 FROM 表名2 WHERE 外层查询结果参与的真值表达式) FROM 表名1; -- 要求子查询不可升维
 ```
 
-* PS: 完全限定列名 (表名. 列名)
+* 完全限定列名 (表名.列名)
 
 ### 联结表
 

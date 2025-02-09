@@ -1,20 +1,24 @@
-- [Emacs](https://zhuanlan.zhihu.com/p/385214753) 知乎大佬 4
+# Emacs
+
+## 参考资料
+
+* [Emacs](https://zhuanlan.zhihu.com/p/385214753) - 知乎大佬 - 4
 
 配置在环境配置中
 
-|功能键|缩写|对应键盘按键(PC/Mac)|
-|:----:|:----:|:----:|
-|Control|C|Ctrl / Control|
-|Meta|M|Alt/Option|
-|Shift|S|Shift|
-|Super|s|Win/Command|
+|   功能键   |  缩写 | 对应键盘按键 (PC/Mac) |
+| :-----: | :-: | :-------------: |
+| Control |  C  |  Ctrl / Control |
+|   Meta  |  M  |    Alt/Option   |
+|  Shift  |  S  |      Shift      |
+|  Super  |  s  |   Win/Command   |
 
-```shell
+```text
 # 光标移动
 C-x C-c 退出
 C-g 终止操作
 C-z 挂起回到命令行 fg回来
-C-p、 C-n、 C-b、 C-f 上下左右
+C-p C-n C-b C-f 上下左右
 M-b 左移一个词 M-f 右移一个词
 C-a 移至行首 C-e 移至行尾
 M-a 移至句首 M-e移至句尾 
@@ -36,10 +40,9 @@ C-y 粘贴 加上M-y粘贴倒数第n+1次移除的内容
 C-x C-SPC或C-u C-SPC 跳转回maek
 
 # 搜索
-C-s 搜索 再按一次 
-C-s下一个 
+C-s 搜索 再按一次 C-s 下一个 
 回车退出 
-C-g退出并返回
+C-g 退出并返回
 
 # 换格式
 交换左右字符 C-t 
@@ -86,6 +89,7 @@ C-M-S-v 向上翻页
 ```
 
 如果参考上面教程的配置
+
 ```bash
 交换 M-w 和 C-w,M-w 为剪切 C-w 为复制
 交换 C-a 和 M-m,C-a 为到缩进后的行首 M-m 为到真正的行首

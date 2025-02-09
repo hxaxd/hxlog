@@ -6,7 +6,7 @@ netstat -atunlp all/tcp/ucp/端口号/监听/PID 看网络与对应进程
 
 curl -I/wget <url>下载
 
-ip 用来显示和操作路由、网络设备、接口等
+ip 用来显示和操作路由 网络设备 接口等
 ifconfig 传统的网络配置工具,用来显示和设置网络接口的参数
 dig 查询DNS
 

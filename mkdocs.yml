@@ -22,7 +22,7 @@ nav:
     - Markdown: 计算机基础/工具/Markdown.md
     - 基本图形开发环境配置: 计算机基础/工具/基本图形开发环境配置.md
     - VSCode与JetBrains使用: 计算机基础/工具/Vscode与JetBrains使用.md
-    - Git与GitHub基本使用: 计算机基础/工具/Git与GitHub基本使用.md
+    - Git基本使用: 计算机基础/工具/Git基本使用.md
     - Linux基础: 计算机基础/工具/Linux基础.md
     - 标记语言: 计算机基础/工具/标记语言.md
     - Shell基础: 计算机基础/工具/Shell基础.md
@@ -32,12 +32,11 @@ nav:
     - Vim基础: 计算机基础/工具/Vim基础.md
     - Emacs基础: 计算机基础/工具/Emacs基础.md
     - 终端开发环境配置: 计算机基础/工具/终端开发环境配置.md
-    - 命令行工具基本使用: 计算机基础/工具/命令行工具基本使用.md
     - SSH基础: 计算机基础/工具/SSH基础.md
     - Tax基础: 计算机基础/工具/Tax基础.md
     - Nginx: 计算机基础/工具/Nginx.md
     - 前端开发常识: 计算机基础/工具/前端开发常识.md
-    - WEB开发常识与工具: 计算机基础/工具/WEB开发常识与工具.md
+    - WEB开发常识: 计算机基础/工具/WEB开发常识.md
   - C语言:
     - CPrimePlus: 计算机基础/C/CPrimePlus.md
     - C和指针: 计算机基础/C/C和指针.md

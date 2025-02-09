@@ -11,7 +11,7 @@ GNU make是makefile的一个实现,而Cmake可以跨平台编译makefile
 ## makefile
 GNU的make工作时的执行步骤如下:
 - 读入所有的Makefile  
-顺序寻找文件名为 GNUmakefile 、 makefile 和 Makefile 的文件  
+顺序寻找文件名为 GNUmakefile   makefile 和 Makefile 的文件  
 使用多条 -f 或 --file 参数,你可以指定多个makefile
 
 - 读入被include的其它Makefile  
