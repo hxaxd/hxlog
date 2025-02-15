@@ -10,11 +10,11 @@
 * Git 是一种分布式版本管理工具, 在中央服务器保存所有文件与历史快照的同时, **每次建立分支都克隆整个仓库**
 * Git 中所有的数据在存储前都计算校验和,Git 数据库中保存的信息都是以文件内容的 SHA-1 哈希值来索引
 * Git 有三种状态 modified staged committed 对应工作区 暂存区 (只是索引) 以及 Git 目录
-* \~/.gitconfig 配置忽略文件
-* \~/.config/git/config 配置文件
+* `~/.gitconfig` 配置忽略文件
+* `~/.config/git/config` 配置文件
 * 安装完 Git 之后, 要做的第一件事就是设置你的用户名和邮件地址
 
-```bash
+```shell
 git --version # 看一眼
 
 git config --global user.name "Your Name Here"
@@ -43,15 +43,17 @@ git config --global credential.helper osxkeychain
 
 * `git rm name` 删除文件
 * `git mv` 相当于重命名
-* `git log` 看历史更改提交人,mail, 提交消息
-* `git reset HEAD name` 撤销暂存
-* `git checkout -- name` 用仓库中的版本替换
+* `git log` 看历史更改提交人, mail, 提交消息
+* `git reset --soft name` 回退版本, 保留工作区, 保留暂存区
+* `git reset --hard name` 都不保留
+* `git reset --mixed name` 保留工作区, 不保留暂存区
+* `git checkout -- rope_name` 用仓库中的版本替换
 
 ### 仓库
 
 * `git remote -v` 看仓库
 * `git remote add <shortname> <url>` 添加一个新的远程 Git 仓库, 可以用 shortname 代替该仓库 url
-* `git fetch <url` 拉取差异, 但是不自动合并
+* `git fetch <url>` 拉取差异, 但是不自动合并
 * `git pull <url>` 并且自动合并
 * `git push origin master` 推送到某仓库某分支, 这是默认的 name
 * `git remote show <remote>` 看仓库信息
@@ -70,3 +72,7 @@ git config --global credential.helper osxkeychain
 * `git checkout -b sf origin/serverfix` 从远程分支创建跟踪并切换到新分支
 * `git push origin --delete serverfix` 删除远程分支
 * `git rebase master serverfix` 合并分支 (变基)
+
+## GitLab
+
+* 私有化部署

@@ -7,12 +7,12 @@
 ## 概念
 
 * ssh 是一种协议, 最常用的实现是 openssh, 内置在大部分 Linux 系统下, 现在的 windows 也可以选择添加了
-* \~/.ssh 存放 SSH 客户端相关配置和密钥文件
-* 生成 authorized\_keys 文件用于存放相关的主机和密钥信息
-* sshd\_config (server 配置文件)
-* ssh\_config (client 配置文件)
+* `~/.ssh` 存放 SSH 客户端相关配置和密钥文件
+* 生成 `authorized_keys` 文件用于存放相关的主机和密钥信息
+* `sshd_config` (server 配置文件)
+* `ssh_config` (client 配置文件)
 
-```bash
+```shell
 # 连接
 ssh 用户名@hostname
 
@@ -39,11 +39,11 @@ scp -P　23 /path/local_file remote_username@remote_ip:/path/target_file
 
 ## 免密码登陆
 
-```bash
+```shell
 # 首先, 你需要生成一对 SSH 密钥对, 包括一个私钥和一个公钥 如果你还没有密钥对, 可以使用 ssh-keygen 命令生成
 ssh-keygen -t rsa -b 4096
 
-# 将你的公钥复制到远程服务器的\~/.ssh/authorized\_keys 文件中 你可以使用 ssh-copy-id 命令简化这个过程
+# 将你的公钥复制到远程服务器的 ~/.ssh/authorized_keys 文件中 你可以使用 ssh-copy-id 命令简化这个过程
 ssh-copy-id user@remote-host
 
 # 确保 ssh-agent 正在运行 如果它没有运行, 你可以手动启动它

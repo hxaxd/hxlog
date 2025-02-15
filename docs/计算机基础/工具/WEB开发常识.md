@@ -40,7 +40,7 @@
 
 * 强烈建议使用 Docker Desktop 来运行容器, 图形化的界面就是爽
 
-```bash
+```shell
 docker pull name
 # 用于从 Docker 仓库拉取镜像
 
@@ -148,5 +148,5 @@ SHELL 覆盖Docker中默认的shell,用于RUN CMD和ENTRYPOINT指令
 
 ### 1panel
 
-* 其可以一键部署各种应用 (docker)
+* 其可以一键部署各种应用 (Docker)
 * 管理界面清晰简单

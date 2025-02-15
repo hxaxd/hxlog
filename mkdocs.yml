@@ -128,7 +128,6 @@ nav:
     - Haskell: 深入方向/Haskell/Haskell.md
     - Lua: 深入方向/Lua/Lua.md
     - Zig: 深入方向/Zig/Zig.md
-    - Nim: 深入方向/Nim/Nim.md
   - 分布式:
     - 分布式系统: 深入方向/分布式/分布式系统.md
     - 数据密集型应用系统设计: 深入方向/分布式/数据密集型应用系统设计.md

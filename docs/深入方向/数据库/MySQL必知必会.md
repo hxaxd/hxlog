@@ -187,7 +187,7 @@ SET PASSWORD FOR 用户名=密码; -- 设置用户密码
 * `data` 目录中有许多日志文件
   * `hostname.err` 错误日志
   * `hostname.log` 查询日志
-  * `hostname-slow.log` 慢语句日志 (用于记录执行时间超过 long\_query\_time 的语句)
+  * `hostname-slow.log` 慢语句日志 (用于记录执行时间超过 `long_query_time` 的语句)
   * `hostname-bin` 二进制日志
   * `FLUSH LOGS` 刷新缓存
   * 文件名可以指定

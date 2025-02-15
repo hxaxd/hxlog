@@ -1,65 +1,86 @@
-- [Make与CMake](https://www.bilibili.com/video/BV1tyWWeeEpp) 神教程 5
-- [跟我一起写Makefile](https://write-makefile-with-me.elabtalk.com/) 翻译的文档 3
-- 菜鸟教程[CMake](https://www.runoob.com/cmake/cmake-tutorial.html) 精简快速 5
+# C++ 工具
 
-### 构建工具
+## 参考资料
 
-[makefile](https://seisman.github.io/how-to-write-makefile/overview.html)是实现自动化编译的关键
-
-GNU make是makefile的一个实现,而Cmake可以跨平台编译makefile
+* [Make 与 CMake](https://www.bilibili.com/video/BV1tyWWeeEpp) - 神教程 - 5
+* [跟我一起写 Makefile](https://write-makefile-with-me.elabtalk.com/) - 翻译的文档 - 3
+* 菜鸟教程 [CMake](https://www.runoob.com/cmake/cmake-tutorial.html) - 精简快速 - 5
 
 ## makefile
-GNU的make工作时的执行步骤如下:
-- 读入所有的Makefile  
-顺序寻找文件名为 GNUmakefile   makefile 和 Makefile 的文件  
-使用多条 -f 或 --file 参数,你可以指定多个makefile
 
-- 读入被include的其它Makefile  
-include 变量/文件/通配
+### 执行步骤
 
-- 初始化文件中的变量
+* 读入被 include 的其它 Makefile
+* 初始化文件中的变量
+* 推导隐式规则, 并分析所有规则
+* 为所有的目标文件创建依赖关系链
+  * `VPATH = dir:dir # 指定文件搜寻目录`
+* 决定哪些目标要重新生成
+* 执行生成命令
 
-- 推导隐式规则,并分析所有规则
+### 使用
 
-- 为所有的目标文件创建依赖关系链  
-`VPATH = dir:dir # 指定文件搜寻目录`
+```shell
+make # 顺序寻找文件名为 GNUmakefile makefile 和 Makefile 的文件, 构建其中的第一个目标
 
-- 根据依赖关系,决定哪些目标要重新生成
+make obj # 指定目标
 
-- 执行生成命令  
-在命令前面加上-,表示忽略错误
-### 小心环境变量MAKEFILES
-### make可以一定程度上的自动推导
+make -f name.mk # 指定 make 文件
 
-### make基础语法
-```make
+make -n # 打印命令, 不执行
+```
+
+### 注意
+
+* 小心环境变量 `MAKEFILES`
+* make 可以一定程度上的自动推导
+
+### make 基础语法
+
+* 注意依赖与命令相同的目标可以写在一起
+* make 会打印执行的命令, `@command` 阻止这一行为
+* 在命令前面加上 `-`, 表示忽略错误
+
+```Makefile
 targets : prerequisites
     command # 注意这个tab必须存在
     ...
 ```
+
 ### 变量与命令包
-```make
+
+```Makefile
 name= f1 f2
 
 define name
 命令
 endef
 ```
-都用$(name)引用
+
+* 变量用 $(name) 引用
+* make 可以使用通配符
+* 预设变量
+  * `@` 目标文件
+  * `<` 第一个依赖文件
+  * `^` 所有依赖文件
 
 ### 伪目标
-```
+
+```Makefile
 .PHONY : clean
 clean :
     -rm edit $(objects) # 实现 make clean
 ```
-伪目标也可以有依赖,类似子命令
+
+* 伪目标也可以有依赖, 类似子命令
+* 经常声明伪目标 `all` 放在第一个目标, 因为无参数的 `make` 默认构建第一个目标
 
 ## Cmake
-CMakeLists.txt
-```cmake
-# PROJECT_BINARY_DIR是cmake系统变量,意思是执行cmake命令的目录
 
+* `CMakeLists.txt`
+
+```CMakeLists
+# PROJECT_BINARY_DIR是cmake系统变量,意思是执行cmake命令的目录
 
 cmake_minimum_required (VERSION 2.8)
 # 要求cmake版本
@@ -94,15 +115,7 @@ target_link_libraries ( hello lib1 lib2 )
 
 add_compile_options ( hello PRIVATE "-Wall" )
 # 将"-Wall"加入编译选项
-
 ```
 
-### 包管理器
-
-## 框架
-
-### boost
-
-### QT
-
-### libevent
+* 执行 `cmake .` 生成 Makefile
+* 执行 `make` 生成可执行文件

@@ -10,7 +10,7 @@
 * `zsh test.sh` 以这种方式运行的脚本忽略指定
 * `#` 注释
 
-```bash
+```shell
 #!/bin/bash
 echo "Hello World !"
 ```
@@ -22,6 +22,12 @@ echo "Hello World !"
 * `readonly name` 声明变量只读 (不是声明变量时)
 * `unset` 删除变量
 * `declare/typeset -i my_integer=42` 声明变量类型, `-i` 整数
+
+```shell
+name="abc$LANG"->abczh_CN...
+name='abc\&LANG'->abc&LANG
+# 引号的区别
+```
 
 #### 字符串
 
@@ -128,7 +134,7 @@ echo "Hello World !"
 
 #### `if`
 
-```bash
+```shell
 if test condition
 then
     command1
@@ -142,7 +148,7 @@ fi
 
 #### `for`
 
-```bash
+```shell
 for var in item1 item2 ... itemN
 do
     command1
@@ -154,7 +160,7 @@ done
 
 #### `while`与`until`
 
-```bash
+```shell
 int=1
 while(( $int<=5 )) # until与之相反
 do
@@ -165,7 +171,7 @@ done
 
 #### `case`
 
-```bash
+```shell
 #!/bin/sh
 
 site="runoob"
@@ -186,7 +192,7 @@ esac
 
 ### 函数
 
-```bash
+```shell
 [ function ](可选) fun_name ()
 {
     action;
@@ -201,7 +207,7 @@ esac
 * `command` 的 `stdin/stdout/stderr` 对应 `0/1/2` 因此有 `command 2>&1`
 * `/dev/null` 黑洞
 
-```bash
+```shell
 $ wc -l << EOF  # Here Document 将EOF中的内容作为command的输入
     欢迎来到
     菜鸟教程
@@ -211,7 +217,7 @@ EOF
 
 ### 文件包含
 
-```bash
+```shell
 #!/bin/bash
 # author:菜鸟教程
 # url:www.runoob.com
