@@ -62,6 +62,7 @@ nav:
     - 大话数据结构: 计算机基础/算法/大话数据结构.md
     - 算法设计与分析: 计算机基础/算法/算法设计与分析.md
     - 数值分析: 计算机基础/算法/数值分析.md
+    - 最优化算法: 计算机基础/算法/最优化算法.md
     - 算法第四版: 计算机基础/算法/算法第四版.md
     - 算法导论: 计算机基础/算法/算法导论.md
     - 算法补充: 计算机基础/算法/算法补充.md
@@ -156,3 +157,15 @@ extra:
       link: https://github.com/hxaxd/hxlog
 repo_url: https://github.com/hxaxd/hxlog
 repo_name: 海星笔记
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
