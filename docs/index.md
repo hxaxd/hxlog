@@ -90,7 +90,7 @@
 * [C++Prime](计算机基础/C++/C++Prime.md)
 * [EffectiveC++](计算机基础/C++/EffectiveC++.md)
 * [MoreEffectiveC++](计算机基础/C++/MoreEffectiveC++.md)
-* [EffectiveModernC++](计算机基础/C++/EffectiveCModern++.md)
+* [EffectiveModernC++](计算机基础/C++/EffectiveModernCC++.md)
 * [EffectiveSTL](计算机基础/C++/EffectiveSTL.md)
 * [程序员的自我修养](计算机基础/C++/程序员的自我修养.md)
 * [深度探索 C++ 对象模型](计算机基础/C++/深度探索C++对象模型.md)
