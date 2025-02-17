@@ -140,27 +140,50 @@ nav:
 
 site_name: 海星笔记
 theme:
-  icon:
-    repo: fontawesome/brands/git-alt
   name: material
   palette:
     scheme: slate
     primary: deep purple
+  languge: zh
+  icon:
+    repo: fontawesome/brands/git-alt
   font:
-    code: Roboto Mono
+    code: Space Mono
+    text: Space Mono
   features:
-    - navigation.tabs
-    - header.autohide
+    - navigation.tabs # 平铺导航栏
+    - navigation.tabs.sticky # 导航栏固定
+    - header.autohide # 自动隐藏标题栏
+    - navigation.footer # 页脚
+    - navigation.instant # 即时加载, 本网站 url 变化时自动加载
+    - navigation.tracking # 导航栏追踪锚点
+    - navigation.path # 显示路径
+    - search.suggest # 搜索建议
+    - search.highlight # 搜索结果高亮
+    - content.code.copy # 代码块复制
+
+plugins:
+  - search
+
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/hxaxd/hxlog
+      link: https://github.com/hxaxd/
+
 repo_url: https://github.com/hxaxd/hxlog
 repo_name: 海星笔记
 
 markdown_extensions:
-  - pymdownx.arithmatex:
+  - pymdownx.arithmatex: # 数学
       generic: true
+  - pymdownx.highlight: # 高亮依赖
+      anchor_linenums: true
+  - pymdownx.superfences # 高亮
+  - pymdownx.inlinehilite # 高亮增强
+  - pymdownx.keys # 快捷键渲染
+  - admonition # 提示框
+  - pymdownx.details # 可折叠提示框
+  - pymdownx.superfences # 提示框增强
 
 extra_javascript:
   - javascripts/katex.js

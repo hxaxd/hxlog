@@ -7,12 +7,12 @@
 ### 使用 MySQL
 
 * MySQL 除了本体外, 还提供了命令行工具, 图形化工具 (不好用), 以及数据库管理工具
-  * 当然, 本质上都是 SQL 语句
+    * 当然, 本质上都是 SQL 语句
 * 想要使用这些工具必须连接到 MySQL 需要指定
-  * 主机名 (本地是 localhost)
-  * 端口号 (默认是 3306)
-  * 用户名 (数据库可以创建不同权限的用户)
-  * 密码 (可以没有)
+    * 主机名 (本地是 localhost)
+    * 端口号 (默认是 3306)
+    * 用户名 (数据库可以创建不同权限的用户)
+    * 密码 (可以没有)
 * 下面列举一些图形化界面工具使用的语句 (全没用!!!)
 
 ```sql
@@ -52,13 +52,13 @@ SHOW WARNINGS; -- 查看警告信息
 * `()` 分组
 * `\\` 转义
 * `[:classname:]` 匹配字符类
-  * `[:alnum:]` 字母和数字
-  * `[:alpha:]` 字母
-  * `[:blank:]` 空格和制表符
-  * `[:cntrl:]` 控制字符
-  * `[:digit:]` 数字
-  * `[:graph:]` 可打印字符
-  * `[:lower:]` 小写字母
+    * `[:alnum:]` 字母和数字
+    * `[:alpha:]` 字母
+    * `[:blank:]` 空格和制表符
+    * `[:cntrl:]` 控制字符
+    * `[:digit:]` 数字
+    * `[:graph:]` 可打印字符
+    * `[:lower:]` 小写字母
 
 ```sql
 SELECT * FROM table_name WHERE column_name REGEXP '正则表达式'; -- 正则表达式搜索
@@ -103,9 +103,9 @@ SELECT last_insert_id(); -- 获取最后一次插入的自增列的值
 
 * 参数名前的 `IN`,`OUT`,`INOUT` 指定参数的类型 (传入, 传出, 传入传出)
 * MySQL 的变量名必须以 `@`开头
-  * `SELECT ... INTO @变量名;` 赋值
-  * `SET @变量名=值;` 赋值
-  * `SELECT @变量名;` 查看值
+    * `SELECT ... INTO @变量名;` 赋值
+    * `SET @变量名=值;` 赋值
+    * `SELECT @变量名;` 查看值
 
 ```sql
 CREATE PROCEDURE 存储过程名(IN 参数1 数据类型,OUT 参数2 数据类型,INOUT ...)COMMENT '注释' -- 会在 SHOW PROCEDURE STATUS 中显示
@@ -127,7 +127,7 @@ SHOW PROCEDURE STATUS; -- 查看所有存储过程的信息
 
 * 触发器是特殊的存储过程, 当它依托的表发生特定操作 (插入 / 更新) 时, 会自动执行
 * `BEFORE`/`AFTER` 指定触发器在事件之前 / 之后执行
-  * `BEFORE` 触发器如果执行失败, 则事件不会发生
+    * `BEFORE` 触发器如果执行失败, 则事件不会发生
 
 ```sql
 CREATE TRIGGER 触发器名 BEFORE/AFTER INSERT/UPDATE/DELETE ON 表名 FOR EACH ROW 行为 -- FOR EACH ROW 表示行为针对每一行 INSERT/UPDATE/DELETE
@@ -139,12 +139,12 @@ DROP TRIGGER 触发器名; -- 删除触发器
 #### `INSERT`触发器
 
 * 新行的信息可以通过 `NEW` 虚拟表访问
-  * 可以修改新行的信息
+    * 可以修改新行的信息
 
 #### `DELETE`触发器
 
 * 旧行的信息可以通过 `OLD` 虚拟表访问
-  * 不可修改旧行的信息
+    * 不可修改旧行的信息
 
 #### `UPDATE`触发器
 
@@ -185,12 +185,12 @@ SET PASSWORD FOR 用户名=密码; -- 设置用户密码
 
 * 备份的最佳方式还是使用备份工具
 * `data` 目录中有许多日志文件
-  * `hostname.err` 错误日志
-  * `hostname.log` 查询日志
-  * `hostname-slow.log` 慢语句日志 (用于记录执行时间超过 `long_query_time` 的语句)
-  * `hostname-bin` 二进制日志
-  * `FLUSH LOGS` 刷新缓存
-  * 文件名可以指定
+    * `hostname.err` 错误日志
+    * `hostname.log` 查询日志
+    * `hostname-slow.log` 慢语句日志 (用于记录执行时间超过 `long_query_time` 的语句)
+    * `hostname-bin` 二进制日志
+    * `FLUSH LOGS` 刷新缓存
+    * 文件名可以指定
 
 ```sql
 FLUSH TABLES; -- 刷新缓存
@@ -217,37 +217,37 @@ ANALYZE TABLE 表名; -- 分析表状态
 #### 数据类型
 
 * 字符串
-  * `CHAR(1~255)` 定长字符串
-  * `TEXT` 变长字符串 (最大 64K)
-  * `MEDIUMTEXT` 变长字符串 (最大 16k)
-  * `LONGTEXT` 变长字符串 (最大 4G)
-  * `TINYTEXT` 变长字符串 (最大 255 字节)
-  * `VARCHAR(n)` 变长字符串 (最大 n 字节, n 最大为 255)
-  * `ENUM` 接受一个预定义的集合 (最多 64K 个值) 中的一个值
-  * `SET` 接受一个预定义的集合 (最多 64 个值) 中的一个子集
-  * 变长串慢且不支持索引
+    * `CHAR(1~255)` 定长字符串
+    * `TEXT` 变长字符串 (最大 64K)
+    * `MEDIUMTEXT` 变长字符串 (最大 16k)
+    * `LONGTEXT` 变长字符串 (最大 4G)
+    * `TINYTEXT` 变长字符串 (最大 255 字节)
+    * `VARCHAR(n)` 变长字符串 (最大 n 字节, n 最大为 255)
+    * `ENUM` 接受一个预定义的集合 (最多 64K 个值) 中的一个值
+    * `SET` 接受一个预定义的集合 (最多 64 个值) 中的一个子集
+    * 变长串慢且不支持索引
 * 整数
-  * `BIT` 1~64 位
-  * `TINYINT` 1 字节
-  * `SMALLINT` 2 字节
-  * `MEDIUMINT` 3 字节
-  * `INT` 4 字节
-  * `BIGINT` 8 字节
-  * 前加 `UNSIGNED` 为同字节无符号整数
+    * `BIT` 1~64 位
+    * `TINYINT` 1 字节
+    * `SMALLINT` 2 字节
+    * `MEDIUMINT` 3 字节
+    * `INT` 4 字节
+    * `BIGINT` 8 字节
+    * 前加 `UNSIGNED` 为同字节无符号整数
 * 浮点数
-  * `REAL` 4 字节
-  * `FLOAT` 单精度
-  * `DOUBLE` 双精度
-  * `DECIMAL(总位数,小数位数)` 可变精度
+    * `REAL` 4 字节
+    * `FLOAT` 单精度
+    * `DOUBLE` 双精度
+    * `DECIMAL(总位数,小数位数)` 可变精度
 * 布尔
-  * `BOOL` 1bit
+    * `BOOL` 1bit
 * 日期
-  * `DATE`YYYY-MM-DD (1000-9999)
-  * `TIME`HH:MM:SS
-  * `DATETIME` 日期和时间
-  * `TIMESTAMP` 小范围的 `DATETIME`
-  * `YEAR` 2 位 (1970-2069) / 4 位 (1901-2155)
+    * `DATE`YYYY-MM-DD (1000-9999)
+    * `TIME`HH:MM:SS
+    * `DATETIME` 日期和时间
+    * `TIMESTAMP` 小范围的 `DATETIME`
+    * `YEAR` 2 位 (1970-2069) / 4 位 (1901-2155)
 * 二进制
-  * `BLOB`64K
-  * `MEDIUMBLOB`16M
-  * `LONGBLOB`4G
+    * `BLOB`64K
+    * `MEDIUMBLOB`16M
+    * `LONGBLOB`4G
