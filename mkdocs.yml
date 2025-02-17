@@ -148,8 +148,8 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
   font:
-    code: Space Mono
-    text: Space Mono
+    code: JetBrains Mono
+    text: JetBrains Mono
   features:
     - navigation.tabs # 平铺导航栏
     - navigation.tabs.sticky # 导航栏固定
