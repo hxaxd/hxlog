@@ -35,7 +35,7 @@ alias pip="/opt/homebrew/bin/pip3"
 
 ## 起步
 
-介绍主流系统中 python 的安装与在终端和 vscode 中运行代码
+介绍主流系统中 python 的安装与在终端和 VSCode 中运行代码
 
 ## 变量和简单的数据类型
 

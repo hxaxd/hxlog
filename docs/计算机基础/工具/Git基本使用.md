@@ -73,6 +73,10 @@ git config --global credential.helper osxkeychain
 * `git push origin --delete serverfix` 删除远程分支
 * `git rebase master serverfix` 合并分支 (变基)
 
+## GitHub
+
+* 交友网站
+
 ## GitLab
 
 * 私有化部署

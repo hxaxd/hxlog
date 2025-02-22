@@ -30,7 +30,7 @@
 
 ### 操作
 
-* `ctrl+art+f [1-6]` 更换 6 个终端
+* `ctrl+alt+f[1-6]` 更换 6 个终端
 * `command` 其实是调用了一个 子 shell `source` 在本 shell
 
 ### 文件系统

@@ -16,7 +16,7 @@
 
 ## 配置环境
 
-* [Tex Live](http://mirror.ctan.org/systems/texlive/Images/)+vscode (插件 latex workshop/latex language support + 配置一下)
+* [Tex Live](http://mirror.ctan.org/systems/texlive/Images/)+VSCode (插件 latex workshop/latex language support + 配置一下)
 
 ## 文档类型
 

@@ -23,7 +23,6 @@ nav:
     - 快捷键备忘录: 计算机基础/工具/快捷键备忘录.md
     - Markdown: 计算机基础/工具/Markdown.md
     - 基本图形开发环境配置: 计算机基础/工具/基本图形开发环境配置.md
-    - VSCode与JetBrains使用: 计算机基础/工具/Vscode与JetBrains使用.md
     - Git基本使用: 计算机基础/工具/Git基本使用.md
     - Linux基础: 计算机基础/工具/Linux基础.md
     - 标记语言: 计算机基础/工具/标记语言.md
@@ -38,6 +37,7 @@ nav:
     - Tax基础: 计算机基础/工具/Tax基础.md
     - Nginx: 计算机基础/工具/Nginx.md
     - 前端开发常识: 计算机基础/工具/前端开发常识.md
+    - 容器常识: 计算机基础/工具/容器常识.md
     - WEB开发常识: 计算机基础/工具/WEB开发常识.md
   - C语言:
     - CPrimePlus: 计算机基础/C/CPrimePlus.md
@@ -182,7 +182,6 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences # 高亮
   - pymdownx.inlinehilite # 高亮增强
-  - pymdownx.keys # 快捷键渲染
   - admonition # 提示框
   - pymdownx.details # 可折叠提示框
   - pymdownx.superfences # 提示框增强
