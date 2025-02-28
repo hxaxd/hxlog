@@ -119,7 +119,8 @@ class Item(BaseModel):
     price: float
     tax: float | None = None
 
-
+wsl --set-default-version 2
+1
 app = FastAPI()
 
 
