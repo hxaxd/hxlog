@@ -167,6 +167,20 @@ async def send_notification(email: str, background_tasks: BackgroundTasks):
     return {"message": "Notification sent in the background"}
 ```
 
+#### 静态文件
+
+* 事实建立独立的 app 来处理静态文件请求
+
+```python
+from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+
+app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static") # 挂载静态文件
+# 指定路径, 实例, 名称
+```
+
 ### 依赖注入
 
 * 可以使用 `Depends` 对象来声明依赖
@@ -232,6 +246,63 @@ async def add_process_time_header(request: Request, call_next):
 ### 安全
 
 * 可以使用 `CORSMiddleware` 来添加 CORS 支持 (指定允许的域名, 方法等)
+* 基于 OAuth2 规范实现安全认证
+* fastapi 会接收账号密码, 验证后返回 token
+    * 前端保存 token, 每次请求时在请求头添加 Authorization : "Bearer+token"
+    * 后端验证 token, 并返回用户信息
+* 使用 passlib 库来哈希密码
+* 使用 pyJWT 库来生成 JWT 令牌
+
+```python
+from typing import Union
+
+from fastapi import Depends, FastAPI
+from fastapi.security import OAuth2PasswordBearer
+from pydantic import BaseModel
+
+app = FastAPI()
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token") # 验证器
+
+
+class User(BaseModel): # 声明用户模型
+    username: str
+    email: Union[str, None] = None
+    full_name: Union[str, None] = None
+    disabled: Union[bool, None] = None
+
+
+def fake_decode_token(token): # 返回用户
+    return User(
+        username=token + "fakedecoded", email="john@example.com", full_name="John Doe"
+    )
+
+
+async def get_current_user(token: str = Depends(oauth2_scheme)): # 验证函数, 依赖于验证器
+    user = fake_decode_token(token)
+    return user
+
+
+@app.get("/users/me")
+async def read_users_me(current_user: User = Depends(get_current_user)): # 依赖于验证函数
+    return current_user
+```
+
+```python
+@app.post("/token")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()): # 登陆函数, 表单依赖于 OAuth2PasswordRequestForm
+    # 注意, 表单模型不能自定义, 是 OAuth2 规范约定的模型
+    user_dict = fake_users_db.get(form_data.username)
+    if not user_dict:
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
+    user = UserInDB(**user_dict)
+    hashed_password = fake_hash_password(form_data.password) # 哈希密码, 一般使用 passlib 库
+    if not hashed_password == user.hashed_password:
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
+
+    return {"access_token": user.username, "token_type": "bearer"}
+```
+
 
 ### 架构
 
