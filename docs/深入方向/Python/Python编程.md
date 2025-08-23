@@ -51,6 +51,9 @@ conda update 包名 # 更新包
 conda list # 查看已安装的包
 ```
 
+- 推荐使用 miniforge 来管理 conda 环境
+- mamba 是 conda 的一个替代, 可以加速包的安装
+
 #### uv
 
 ```shell
@@ -76,6 +79,29 @@ uv tool run ruff # 检查代码
 
 uv pip install 包名 # 安装包
 ```
+
+#### pixi
+
+- 类似 uv, 但支持 forge 中的包
+
+### 项目配置
+
+- python 使用 pyproject.toml 来配置项目
+
+```toml
+[project]
+name = "name"
+version = "1.0.0"
+description = "项目描述"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+
+]
+```
+
+- uv/pixi 本质上就是操纵 pyproject.toml 文件
+- 但它们会提供一个 .lock 文件, 用来记录安装的包的版本, 以确保项目的可重复性
 
 ## 起步
 
