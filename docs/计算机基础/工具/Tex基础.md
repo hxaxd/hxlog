@@ -20,8 +20,8 @@
 
 ## 文档类型
 
-- 英文, 可以用 `book article和beamer`
-- 中文, 可以用 `ctexbook ctexart和ctexbeamer`, 这些类型自带了对中文的支持
+- 英文, 可以用 `book article 和 beamer`
+- 中文, 可以用 `ctexbook ctexart 和 ctexbeamer`, 这些类型自带了对中文的支持
 - 不同的文件类型, 编写的过程中也会有一定的差异, 如果直接修改文件类型的话, 甚至会报错
 - 以下统一选用 `ctexart` 在编辑框第一行
 

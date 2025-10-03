@@ -204,17 +204,17 @@
 
 ```c++
 // 显示转换
-cast-name<type>(expression); // 若type是引用, 则结果是左值
+cast-name<type>(expression); // 若 type 是引用, 则结果是左值
 
-static_cast<type>(expression); // 只要不包含底层const即可
+static_cast<type>(expression); // 只要不包含底层 const 即可
 
-const_cast<type>(expression); // 只能改变运算对象的底层const
+const_cast<type>(expression); // 只能改变运算对象的底层 const
 
 reinterpret_cast<type>(expression); // 通常为运算对象的位模式提供较低层次上的重新解释
-// 如将int*转换为char*
+// 如将 int*转换为 char*
 
 // 关于类的按下不表
-// 旧的c风格转换依旧可以用, 但语义不明确
+// 旧的 c 风格转换依旧可以用, 但语义不明确
 ```
 
 ### 语句
@@ -260,16 +260,16 @@ try {
         throw errClass(info); // 抛出匿名异常对象
     }
 } catch (errClass e1) {
-    // 处理e1的代码
+    // 处理 e1的代码
 } catch (errClass e2) {
-    // 处理e2的代码
+    // 处理 e2的代码
 } catch (errClass e3) {
-    // 处理e3的代码
+    // 处理 e3的代码
 
-// exception头文件
+// exception 头文件
 throw exception(); // 无信息
 
-// stdexcept头文件
+// stdexcept 头文件
 throw runtime_error("info"); // 只有运行时才能检查的错误
 throw logic_error("info"); // 程序逻辑错误
 throw domain_error("info"); // 参数对应的结果值不存在
@@ -336,7 +336,7 @@ throw underflow_error("info"); // 算术运算下溢
 - NDEBUG 宏用于要求不调试 (可禁止 assert), 我们可以借用定义自己的 debug 行为
 
 ```C++
-// 存放名字的const char数组
+// 存放名字的 const char 数组
 __FILE__ // 文件名
 __LINE__ // 行号
 __TIME__ // 编译时间
@@ -352,8 +352,8 @@ __func__ // 函数名
 
 ```C++
 // 1 类型相同, 数组转换指针
-// 1.5 顶层const           // 都是精确匹配
-// 2 底层const转换 //只能用于非const转换为const
+// 1.5 顶层 const           // 都是精确匹配
+// 2 底层 const 转换 //只能用于非 const 转换为 const
 // 3 类型提升
 // 4 算术类型转换(除了提升)与指针转换(0/nullptr/void*)
 // 5 类类型转换

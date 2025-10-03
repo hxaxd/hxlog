@@ -149,7 +149,7 @@ SELECT 列名1 (SELECT 计算字段 FROM 表名2 WHERE 外层查询结果参与�
 
 ```sql
 SELECT 列名1, 列名2 FROM 表名1, 表名2 WHERE 真值表达式; -- 满足真值表达式的行被联结即等值联结(内联结)
--- 没WHERE会返回笛卡尔积
+-- 没 WHERE 会返回笛卡尔积
 -- 亦可
 SELECT 列名1, 列名2 FROM 表名1 INNER JOIN 表名2 ON 真值表达式; -- 内联结
 ```
@@ -226,7 +226,7 @@ CREATE TABLE 表名(列名1 数据类型 NOT NULL, 列名2 数据类型, ...); -
 
 列名 数据类型 NOT NULL DEFAULT 值; -- 指定默认值
 
-ALTER TABLE 表名 ADD 列名 数据类型; -- 添加列, ALTER TABLE还支持许多操作, 但强依赖环境, 不建议使用
+ALTER TABLE 表名 ADD 列名 数据类型; -- 添加列, ALTER TABLE 还支持许多操作, 但强依赖环境, 不建议使用
 
 RENAME TABLE 旧表名 TO 新表名; -- 重命名表
 
@@ -263,7 +263,7 @@ EXECUTE 存储过程名(参数1, 参数2, ...); -- 执行存储过程
 ```sql
 START TRANSACTION; -- 开始事务
 
--- 一系列SQL语句
+-- 一系列 SQL 语句
 
 ROLLBACK; -- 回滚到事务开始前的状态
 

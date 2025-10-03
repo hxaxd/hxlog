@@ -508,5 +508,5 @@ uvicorn filename:objname # 启动服务器
 # --workers 进程数
 # --log-level 日志级别
 # --log-config 日志文件位置
-# --ssl-keyfile=SSL密钥文件 --ssl-certfile=SSL证书文件
+# --ssl-keyfile=SSL 密钥文件 --ssl-certfile=SSL 证书文件
 ```

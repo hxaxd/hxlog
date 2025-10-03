@@ -176,7 +176,7 @@ SHOW GRANTS FOR 用户名; -- 查看用户的权限
 
 GRANT 权限1, 权限2 ON 数据库.表 TO 用户名; -- 授予用户权限
 REVOKE ALL 权限 FROM 用户名; -- 撤销用户权限
--- 可以是ALL或ON ...
+-- 可以是 ALL 或 ON ...
 
 SET PASSWORD FOR 用户名=密码; -- 设置用户密码
 ```

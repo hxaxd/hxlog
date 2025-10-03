@@ -181,7 +181,7 @@ sorted(name) # 临时排序(不修改原列表)
 ## 操作列表
 
 ```python
-for name in 列表name:
+for name in 列表 name:
     ...
     ... # 缩进代码在循环体中执行
 ... # 在循环体外执行
@@ -230,7 +230,7 @@ or # ||
 not # !
 a in b # 判断一个元素是否在列表中/判断 a 为 b 的子字符串
 a is  b # 判断两个标识符是否指向同一个对象
-列表name # 判断列表非空
+列表 name # 判断列表非空
 ```
 
 ## 字典
@@ -247,7 +247,7 @@ del name['key1'] # 删除
 name.keys() # 获取所有键
 name.values() # 获取所有值
 
-name.get(key, 若无返回值(缺省为none)) # 获取键对应的值
+name.get(key, 若无返回值(缺省为 none)) # 获取键对应的值
 
 for key, value in name.items():
     ...

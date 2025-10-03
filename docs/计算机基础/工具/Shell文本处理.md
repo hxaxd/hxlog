@@ -22,7 +22,7 @@ diff fromfile tofile # 文本对比-bBi 忽略连续空格/忽略空白行/忽�
 
 cmp -l file1 file2 # 对比二进制 返回第一个不同
 
-patch -pn # 根据diff输出文件来更改
+patch -pn # 根据 diff 输出文件来更改
 patch -R -pn # 还原
 ```
 
