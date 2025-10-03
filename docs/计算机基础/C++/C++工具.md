@@ -80,7 +80,7 @@ clean :
 - `CMakeLists.txt`
 
 ```CMakeLists
-# PROJECT_BINARY_DIR是cmake系统变量,意思是执行cmake命令的目录
+# PROJECT_BINARY_DIR是cmake系统变量, 意思是执行cmake命令的目录
 
 cmake_minimum_required (VERSION 2.8)
 # 要求cmake版本
@@ -108,7 +108,7 @@ add_library(lib_name STATIC/SHARED ${var})
 # 生成库文件
 
 find_library(var lib_name lib_path1 lib_path2)
-# 查找库,并把库的绝对路径和名称存储到第一个参数里
+# 查找库, 并把库的绝对路径和名称存储到第一个参数里
 
 target_link_libraries ( hello lib1 lib2 )
 # 将lib1 lib2加入target的链接库
