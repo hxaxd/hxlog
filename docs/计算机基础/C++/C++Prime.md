@@ -260,11 +260,11 @@ try {
         throw errClass(info); // 抛出匿名异常对象
     }
 } catch (errClass e1) {
-    // 处理 e1的代码
+    // 处理 e1 的代码
 } catch (errClass e2) {
-    // 处理 e2的代码
+    // 处理 e2 的代码
 } catch (errClass e3) {
-    // 处理 e3的代码
+    // 处理 e3 的代码
 
 // exception 头文件
 throw exception(); // 无信息

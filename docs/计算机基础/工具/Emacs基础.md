@@ -38,7 +38,7 @@ M-d 移除右一个词 M-<DEL>移除左一个词
 # 复制粘贴
 C-SPC 选中 Emacs 下方显示 "Mark set"
 M-w 复制选中的区域 C-w 剪切选中的区域
-C-y 粘贴 加上 M-y 粘贴倒数第 n+1次移除的内容
+C-y 粘贴 加上 M-y 粘贴倒数第 n+1 次移除的内容
 C-x C-SPC 或 C-u C-SPC 跳转回 maek
 
 # 搜索

@@ -81,7 +81,7 @@ SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('搜索关键字'); --
 SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('搜索关键字' WITH QUERY EXPANSION);  -- 将结果作为关键字搜索
 
 -- 布尔搜索
-SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('+搜索关键字1 -搜索关键字2' IN BOOLEAN MODE); -- 搜索 关键字1 出现, 搜索 关键字2 不出现
+SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('+搜索关键字 1 -搜索关键字 2' IN BOOLEAN MODE); -- 搜索 关键字 1 出现, 搜索 关键字 2 不出现
 -- 有许多符号可以使用
 ```
 
@@ -91,7 +91,7 @@ SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('+搜索关键字1 -�
 - MYISAM 支持全文本搜索 InnoDB 支持事务处理, MEMORY 是存在于内存中的 MYISAM
 
 ```sql
-CREATE TABLE 表名(列名1 数据类型 NOT NULL, 列名2 数据类型, ...)ENGINE=InnoDB; -- 指定引擎
+CREATE TABLE 表名(列名 1 数据类型 NOT NULL, 列名 2 数据类型, ...)ENGINE=InnoDB; -- 指定引擎
 
 列名 数据类型 NOT NULL AUTO_INCREMENT; -- 指定自增列 (行间值唯一)(有个全局变量, 每次自增 1 作为默认值)
 -- 但也可以在 INSERT 中指定 (相当于改变变量值, 以此自增)
@@ -108,7 +108,7 @@ SELECT last_insert_id(); -- 获取最后一次插入的自增列的值
     - `SELECT @变量名;` 查看值
 
 ```sql
-CREATE PROCEDURE 存储过程名(IN 参数1 数据类型, OUT 参数2 数据类型, INOUT ...)COMMENT '注释' -- 会在 SHOW PROCEDURE STATUS 中显示
+CREATE PROCEDURE 存储过程名(IN 参数 1 数据类型, OUT 参数 2 数据类型, INOUT ...)COMMENT '注释' -- 会在 SHOW PROCEDURE STATUS 中显示
 BEGIN
     -- 存储过程体
     IF 条件 THEN
@@ -159,7 +159,7 @@ SHOW CHARACTER SET; -- 查看所有字符集
 
 SHOW COLLATION; -- 查看所有校对顺序
 
-CREATE TABLE 表名(列名1 数据类型 DEFAULT CHARACTER SET 字符集 COLLATE 校对顺序, 列名2 数据类型)DEFAULT CHARACTER SET 字符集 COLLATE 校对顺序; -- 指定列/全局字符集和校对顺序
+CREATE TABLE 表名(列名 1 数据类型 DEFAULT CHARACTER SET 字符集 COLLATE 校对顺序, 列名 2 数据类型)DEFAULT CHARACTER SET 字符集 COLLATE 校对顺序; -- 指定列/全局字符集和校对顺序
 ```
 
 ### 用户管理
@@ -174,7 +174,7 @@ DROP USER 用户名; -- 删除用户
 
 SHOW GRANTS FOR 用户名; -- 查看用户的权限
 
-GRANT 权限1, 权限2 ON 数据库.表 TO 用户名; -- 授予用户权限
+GRANT 权限 1, 权限 2 ON 数据库.表 TO 用户名; -- 授予用户权限
 REVOKE ALL 权限 FROM 用户名; -- 撤销用户权限
 -- 可以是 ALL 或 ON ...
 

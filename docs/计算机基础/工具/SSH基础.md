@@ -30,7 +30,7 @@ scp -r /path/local_directory remote_username@remote_ip:/path/target_directory
 # 远程拷贝多个文件的命令形式比较繁琐, 就不写了
 scp remote_username@remote_ip:/path/source_file /path/target_file
 
-# 指定使用23号端口
+# 指定使用 23 号端口
 scp -P　23 /path/local_file remote_username@remote_ip:/path/target_file
 ```
 

@@ -81,7 +81,7 @@ find 建议用 fd 代替
 head/tail filename 看文件头尾 tail -f 自动跟随新增 (实时监控)
 more/less filename 按页看文件
 cat filename 读文本文件 -n 行号 -s 多空行合并
-od filename 二进制看文件 -t x/c 16进制/字符
+od filename 二进制看文件 -t x/c 16 进制/字符
 wc filename 统计
 
 touch 建立空文件/改时间
@@ -99,7 +99,7 @@ chmod [mode] filename -R 递归
 
 mode:
 - u/g/o/a +/-/= r/w/x
-- xyz r/w/x=4/2/1 x/y/z=u/g/o(r+w+x) 如777
+- xyz r/w/x=4/2/1 x/y/z=u/g/o(r+w+x) 如 777
 
 umask 打印文件默认权限 拿掉的权限累加
 chattr -R +-ai 只追加/不可修改 改变属性

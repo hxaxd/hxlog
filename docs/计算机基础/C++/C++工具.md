@@ -111,7 +111,7 @@ find_library(var lib_name lib_path1 lib_path2)
 # 查找库, 并把库的绝对路径和名称存储到第一个参数里
 
 target_link_libraries ( hello lib1 lib2 )
-# 将 lib1 lib2加入 target 的链接库
+# 将 lib1 lib2 加入 target 的链接库
 
 add_compile_options ( hello PRIVATE "-Wall" )
 # 将"-Wall"加入编译选项

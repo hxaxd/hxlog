@@ -197,7 +197,7 @@ esac
 {
     action;
 
-    [return int;](可选, int 为0-255)
+    [return int;](可选, int 为 0-255)
 }
 ```
 
