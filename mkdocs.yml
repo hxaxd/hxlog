@@ -145,7 +145,7 @@ theme:
   palette:
     scheme: slate
     primary: deep purple
-  languge: zh
+  language: zh
   icon:
     repo: fontawesome/brands/git-alt
   font:
