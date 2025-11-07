@@ -1,4 +1,4 @@
-# Tax
+# Tex
 
 ## 参考资料
 
@@ -25,7 +25,7 @@
 - 不同的文件类型, 编写的过程中也会有一定的差异, 如果直接修改文件类型的话, 甚至会报错
 - 以下统一选用 `ctexart` 在编辑框第一行
 
-```tax
+```Tex
 \documentclass[12pt(字体大小), a4paper(纸张大小), oneside(单面打印)]{ctexart}
 
 \begin{document}
@@ -48,7 +48,7 @@
 - 标题可以用 `\title{}` 设置, 作者可以用 `\author` 设置, 日期可以用 `\date{}` 设置, 这些都需要放在导言区
 - 为了在文档中显示标题信息, 需要使用 `\maketitle`
 
-```tax
+```Tex
 \documentclass[12pt, a4paper, oneside]{ctexart}
 \usepackage{amsmath, amsthm, amssymb, graphicx}
 \usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
@@ -74,7 +74,7 @@
 - 相邻的两行在编译时仍然会视为同一段
 - 在 LaTeX 中, 另起一段的方式是使用一行相隔
 
-```tax
+```Tex
 我是第一段.
 
 我是第二段.
@@ -97,7 +97,7 @@
 
 - 对于 ctexart 文件类型, 章节可以用 `\section {}` 和 `\subsection {}` 命令来标记
 
-```tax
+```Tex
 ...
 \begin{document}
 
@@ -121,7 +121,7 @@
 - 在有了章节的结构之后, 使用 `\tableofcontents` 命令就可以在指定位置生成目录
 - 通常带有目录的文件需要编译两次, 因为需要先在目录中生成 `.toc` 文件, 再据此生成目录
 
-```tax
+```Tex
 ...
 \begin{document}
 
@@ -144,7 +144,7 @@
 
 ## 图片
 
-```tax
+```Tex
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=8cm]{图片.jpg}
@@ -161,7 +161,7 @@
 
 - LaTeX 中表格的插入较为麻烦, 可以直接使用 `Create LaTeX tables online – TablesGenerator.com` 来生成
 
-```tax
+```Tex
 \begin{table}[htbp]
     \centering
     \caption{表格标题}
@@ -179,7 +179,7 @@
 - 有序列表 `enumerate`
 - 描述 `description`
 
-```tax
+```Tex
 \begin{enumerate}
     \item 这是第一点;
     \item 这是第二点;
@@ -189,7 +189,7 @@
 
 - 另外, 也可以自定义 `\item` 的样式
 
-```tax
+```Tex
 \begin{enumerate}
     \item[(1)] 这是第一点;
     \item[(2)] 这是第二点;
@@ -205,7 +205,7 @@
     - {定理} 设置了该环境显示的名称是 "定理"
     - `[section]` 的作用是让 theorem 环境在每个 section 中单独编号
 
-```tax
+```Tex
 \begin{theorem}[定理名称]
     这里是定理的内容.
 \end{theorem}
@@ -219,7 +219,7 @@
 - 除此之外, 我们也可以修改页面大小为 b5paper 等等
 - 为了让每一页显示的内容更多一些, 我们可以使用 geometry 宏包
 
-```tax
+```Tex
 \usepackage{geometry}
 \geometry{left=2.54cm, right=2.54cm, top=3.18cm, bottom=3.18cm}
 ```
