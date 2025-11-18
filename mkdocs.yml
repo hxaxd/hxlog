@@ -118,6 +118,7 @@ nav:
     - Python后端开发基本框架: Python/Python后端开发基本框架.md
     - Python数据处理与计算框架: Python/Python数据处理与计算框架.md
   - 面试题:
+    - C++: 面试题/C++.md
     - Redis: 面试题/Redis.md
     - MySQL: 面试题/MySQL.md
     - PostgreSQL: 面试题/PostgreSQL.md
