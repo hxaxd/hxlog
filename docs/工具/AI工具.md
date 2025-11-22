@@ -34,3 +34,7 @@
 - `.claude/command` 文件夹中的 md 文件为自定义命令
 - `/agent` 创建智能体
 - `resume` 历史话题
+
+## 豆包
+
+略

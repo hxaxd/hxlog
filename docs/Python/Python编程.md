@@ -12,7 +12,7 @@
 
 Windows 安装在官网下载即可, 注意加入环境变量
 
-```shell
+```bash
 brew install python # 用相应的包管理器安装
 
 # pip 包管理
@@ -35,7 +35,7 @@ alias pip="/opt/homebrew/bin/pip3"
 
 #### conda
 
-```shell
+```bash
 conda create -n 环境名 python=版本号 # 创建虚拟环境
 activate 环境名 # 激活虚拟环境
 deactivate # 退出虚拟环境
@@ -56,7 +56,7 @@ conda list # 查看已安装的包
 
 #### uv
 
-```shell
+```bash
 pip install uv # 安装 uv 工具
 
 uv python list # 查看已安装的 python 版本

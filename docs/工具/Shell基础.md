@@ -108,7 +108,7 @@ lsattr 显示属性 -a 隐藏
 
 ### 解压缩
 
-```shell
+```bash
 - tar -jcv -f name.tar.bz2 打包压缩
 - tar -jtv -f f... 查询
 - tar -jxv -f f... 解压

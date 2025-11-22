@@ -20,7 +20,7 @@
 
 ### 使用
 
-```shell
+```bash
 make # 顺序寻找文件名为 GNUmakefile makefile 和 Makefile 的文件, 构建其中的第一个目标
 
 make obj # 指定目标

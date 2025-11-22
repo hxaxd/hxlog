@@ -14,7 +14,7 @@
 - `~/.config/git/config` 配置文件
 - 安装完 Git 之后, 要做的第一件事就是设置你的用户名和邮件地址
 
-```shell
+```bash
 git --version # 看一眼
 
 git config --global user.name "Your Name Here"

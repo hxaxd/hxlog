@@ -499,7 +499,7 @@ class Course(Base):
 
 - 基于 ASGI 协议的异步 web 服务器 (不同于 WSGI)
 
-```shell
+```bash
 uvicorn filename:objname # 启动服务器
 
 # --reload 热重载

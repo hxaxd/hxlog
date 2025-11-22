@@ -10,7 +10,7 @@
 - `zsh test.sh` 以这种方式运行的脚本忽略指定
 - `#` 注释
 
-```shell
+```bash
 #!/bin/bash
 echo "Hello World !"
 ```
@@ -23,7 +23,7 @@ echo "Hello World !"
 - `unset` 删除变量
 - `declare/typeset -i my_integer=42` 声明变量类型, `-i` 整数
 
-```shell
+```bash
 name="abc$LANG"->abczh_CN...
 name='abc\&LANG'->abc&LANG
 # 引号的区别
@@ -134,7 +134,7 @@ name='abc\&LANG'->abc&LANG
 
 #### `if`
 
-```shell
+```bash
 if test condition
 then
     command1
@@ -148,7 +148,7 @@ fi
 
 #### `for`
 
-```shell
+```bash
 for var in item1 item2 ... itemN
 do
     command1
@@ -160,7 +160,7 @@ done
 
 #### `while`与`until`
 
-```shell
+```bash
 int=1
 while(( $int<=5 )) # until 与之相反
 do
@@ -171,7 +171,7 @@ done
 
 #### `case`
 
-```shell
+```bash
 #!/bin/sh
 
 site="runoob"
@@ -192,7 +192,7 @@ esac
 
 ### 函数
 
-```shell
+```bash
 [ function ](可选) fun_name ()
 {
     action;
@@ -207,7 +207,7 @@ esac
 - `command` 的 `stdin/stdout/stderr` 对应 `0/1/2` 因此有 `command 2>&1`
 - `/dev/null` 黑洞
 
-```shell
+```bash
 $ wc -l << EOF  # Here Document 将 EOF 中的内容作为 command 的输入
     欢迎来到
     菜鸟教程
@@ -217,7 +217,7 @@ EOF
 
 ### 文件包含
 
-```shell
+```bash
 #!/bin/bash
 # author:菜鸟教程
 # url:www.runoob.com

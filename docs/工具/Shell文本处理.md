@@ -6,7 +6,7 @@
 
 ## 文本基本操作
 
-```shell
+```bash
 sort file/stdio # 排序 -n/r/f/k 按数字大小 / 反向排 / 忽略大小写 / 排每行的第 n 个字段
 uniq file # 去重复打印 -d/c 只显示重复 / 显示行重复次数
 command | tee filename # 重定向加打印 -af add / 覆盖
@@ -17,7 +17,7 @@ command | tee filename # 重定向加打印 -af add / 覆盖
 
 - [diff 输出的格式](https://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html)
 
-```shell
+```bash
 diff fromfile tofile # 文本对比-bBi 忽略连续空格/忽略空白行/忽略大小写 
 
 cmp -l file1 file2 # 对比二进制 返回第一个不同
@@ -56,7 +56,7 @@ patch -R -pn # 还原
 
 ## `grep`
 
-```shell
+```bash
 grep [option] pattern file # 查找文件中匹配的行
 
 # -A<显示行数>:除了显示符合范本样式的那一列之外, 并显示该行之后的内容 
@@ -69,7 +69,7 @@ grep [option] pattern file # 查找文件中匹配的行
 
 ## `sed`
 
-```shell
+```bash
 sed [options] 'command' file(s) # 逐行编辑
 sed [options] -f scriptfile file(s) # 从文件中读取命令
 

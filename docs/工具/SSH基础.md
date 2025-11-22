@@ -12,7 +12,7 @@
 - `sshd_config` (server 配置文件)
 - `ssh_config` (client 配置文件)
 
-```shell
+```bash
 # 连接
 ssh 用户名@hostname
 
@@ -39,7 +39,7 @@ scp -P　23 /path/local_file remote_username@remote_ip:/path/target_file
 
 ## 免密码登陆
 
-```shell
+```bash
 # 首先, 你需要生成一对 SSH 密钥对, 包括一个私钥和一个公钥 如果你还没有密钥对, 可以使用 ssh-keygen 命令生成
 ssh-keygen -t rsa -b 4096
 

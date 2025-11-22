@@ -13,7 +13,7 @@
 
 ## 命令
 
-```shell
+```bash
 nginx -s signal # 发送信号给 nginx 进程
 # 常用信号
 # stop 快速停止 nginx 服务器
@@ -81,7 +81,7 @@ http {
 - --permanent: 表示设置为持久
 - --add-port: 标识添加的端口
 
-```shell
+```bash
 service firewalld start # 启动防火墙
 service firewalld restart # 重启防火墙
 service firewalld stop # 停止防火墙
@@ -123,7 +123,7 @@ service.example.com {
 
 #### 常用命令
 
-```shell
+```bash
 caddy run            # 启动 Caddy 服务器
 caddy stop           # 停止 Caddy 服务器
 caddy reload         # 重新加载配置文件

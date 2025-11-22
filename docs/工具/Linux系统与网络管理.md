@@ -4,7 +4,7 @@
 
 ## 网络
 
-```shell
+```bash
 netstat -atunlp all/tcp/ucp/端口号/监听/PID # 看网络与对应进程
 
 curl -I/wget <url> # 下载
@@ -21,7 +21,7 @@ iptables # 防火墙
 
 ## 账号
 
-```shell
+```bash
 # 不妨使用图形界面进行账号的添加和修改吧
 id # 看一眼
 sudo command # 假装是 root
@@ -32,7 +32,7 @@ w # 看登陆
 
 ## 进程
 
-```shell
+```bash
 pgrep -f name # 查询进程
 pkill -f name # 发送 sign 可以用名字是优势
 
@@ -80,7 +80,7 @@ SIGCONT (值为 18):继续执行之前被 SIGSTOP 暂停的进程
 
 ### 文件系统
 
-```shell
+```bash
 mount 挂载文件系统
 
 fdisk 磁盘分区
