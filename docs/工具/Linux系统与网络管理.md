@@ -6,6 +6,8 @@
 
 ```bash
 netstat -atunlp all/tcp/ucp/端口号/监听/PID # 看网络与对应进程
+tcpdump -i eth0 -n -s 0 -w dump.pcap # 抓包, 保存到 dump.pcap 中
+ss -tuln # 查看监听端口
 
 curl -I/wget <url> # 下载
 
@@ -30,6 +32,24 @@ exit # 退账号
 w # 看登陆
 ```
 
+## 日志
+
+```bash
+journalctl -u 服务名 # 查看服务的日志
+cat /var/log/syslog # 查看系统日志
+cat /var/log/* # 查看日志
+cat /run/log/ # 查看日志
+
+```
+
+## 系统状态
+
+```bash
+dmesg # 查看内核日志
+dmesg grep 错误关键词 # 查看内核日志中包含错误关键词的行
+uname -r # 查看内核版本
+```
+
 ## 进程
 
 ```bash
@@ -37,8 +57,10 @@ pgrep -f name # 查询进程
 pkill -f name # 发送 sign 可以用名字是优势
 
 du # 当前目录硬盘占用 -h 人类可读 -s - 符合后面通配的文件的占用
+iostat -x 1 # 每 1 秒输出一次磁盘 IO 统计信息
 df # 整个系统的情况 -i 看 inode 使用情况
 free # 看内存情况
+vmstat 1 # 每 1 秒输出一次内存统计信息
 
 ps aux  # 看所有进程
 ps -l  # 看自己 shell 的

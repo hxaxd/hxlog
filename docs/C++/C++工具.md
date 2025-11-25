@@ -119,3 +119,21 @@ add_compile_options ( hello PRIVATE "-Wall" )
 
 - 执行 `cmake .` 生成 Makefile
 - 执行 `make` 生成可执行文件
+
+## GDB
+
+- `ulimit -c unlimited` 开启核心转储
+- `gdb ./a.out` 调试可执行文件
+- `gdb ./core.12345` 调试核心转储文件, 12345 是进程号
+  - `bt` 打印调用栈
+  - `info locals` 打印局部变量
+  - `info args` 打印参数
+  - `print var` 打印变量 var 的值
+
+## valgrind
+
+## gprof
+
+## strace
+
+## ldd

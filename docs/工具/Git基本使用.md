@@ -48,6 +48,7 @@ git config --global credential.helper osxkeychain
 - `git reset --hard name` 都不保留
 - `git reset --mixed name` 保留工作区, 不保留暂存区
 - `git checkout -- rope_name` 用仓库中的版本替换
+- `git revert name` 通过生成新的提交, 撤销指定提交的更改, 不会破坏历史
 
 ### 仓库
 
