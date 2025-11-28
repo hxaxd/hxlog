@@ -48,6 +48,6 @@
 
 ### `std::multimap` 与 `std::multiset`
 
-### Lambda 表达式与 `std::function`
+### Lambda 表达式 / `std::function` / `std::bind`
 
 ### 协程

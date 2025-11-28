@@ -303,7 +303,6 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()): # 登陆函�
     return {"access_token": user.username, "token_type": "bearer"}
 ```
 
-
 ### 架构
 
 - 可以使用 `APIRouter` 来声明本文件的路由组 (app 的分身)
