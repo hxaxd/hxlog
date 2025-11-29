@@ -17,35 +17,35 @@
 - `/bin` 基础用户命令（单用户模式可用）
 - `/boot` 内核与引导加载器文件
 - `/dev` 设备节点
-  - `/dev/null` 黑洞, 写即丢, 读即 EOF
-  - `/dev/zero` 零源, 无限 0 流
+    - `/dev/null` 黑洞, 写即丢, 读即 EOF
+    - `/dev/zero` 零源, 无限 0 流
 - `/etc` 系统配置
-  - `/etc/hosts` 静态主机映射
-  - `/etc/resolv.conf` DNS 服务器列表
-  - `/etc/passwd` 用户账号数据库
-  - `/etc/group` 用户组数据库
+    - `/etc/hosts` 静态主机映射
+    - `/etc/resolv.conf` DNS 服务器列表
+    - `/etc/passwd` 用户账号数据库
+    - `/etc/group` 用户组数据库
 - `/home` 普通用户家目录
 - `/lib` 基础共享库与内核模块
 - `/media` 自动挂载点（U 盘、光驱等）
 - `/mnt` 手动临时挂载点
 - `/opt` 第三方大型软件包
 - `/proc` 运行时内核与进程视图
-  - `cat /proc/[pid]/status` 进程状态快照
-  - `ls -l /proc/[pid]/fd` 已打开文件列表
-  - `cat /proc/[pid]/fdinfo/[fd]` 文件描述符详情
-  - `cat /proc/cpuinfo` CPU 硬件信息
-  - `cat /proc/meminfo` 内存使用统计
+    - `cat /proc/[pid]/status` 进程状态快照
+    - `ls -l /proc/[pid]/fd` 已打开文件列表
+    - `cat /proc/[pid]/fdinfo/[fd]` 文件描述符详情
+    - `cat /proc/cpuinfo` CPU 硬件信息
+    - `cat /proc/meminfo` 内存使用统计
 - `/root` 超级用户家目录
 - `/sbin` 系统管理命令
 - `/srv` 本机对外提供的服务数据
 - `/sys` 内核设备模型接口
-  - `/sys/class` 按功能分类的设备
-  - `/sys/block` 块设备
-  - `/sys/char` 字符设备
-  - `/sys/devices` 物理设备树
-  - `/sys/fs` 文件系统参数
-  - `/sys/kernel` 内核可调参数
-  - `/sys/module` 已加载模块列表
+    - `/sys/class` 按功能分类的设备
+    - `/sys/block` 块设备
+    - `/sys/char` 字符设备
+    - `/sys/devices` 物理设备树
+    - `/sys/fs` 文件系统参数
+    - `/sys/kernel` 内核可调参数
+    - `/sys/module` 已加载模块列表
 - `/tmp` 临时文件（重启清空）
 - `/usr` 只读用户程序与数据
 - `/var` 可变数据（日志、缓存、队列）

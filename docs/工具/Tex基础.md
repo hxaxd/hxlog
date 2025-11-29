@@ -200,10 +200,10 @@
 ## 定理环境
 
 - 导言区加入以下代码
-  - `\newtheorem{theorem}{定理}[section]`
-  - 其中 `{theorem}` 是环境的名称
-  - {定理} 设置了该环境显示的名称是 "定理"
-  - `[section]` 的作用是让 theorem 环境在每个 section 中单独编号
+    - `\newtheorem{theorem}{定理}[section]`
+    - 其中 `{theorem}` 是环境的名称
+    - {定理} 设置了该环境显示的名称是 "定理"
+    - `[section]` 的作用是让 theorem 环境在每个 section 中单独编号
 
 ```Tex
 \begin{theorem}[定理名称]

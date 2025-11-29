@@ -14,7 +14,7 @@
 - 初始化文件中的变量
 - 推导隐式规则, 并分析所有规则
 - 为所有的目标文件创建依赖关系链
-  - `VPATH = dir:dir # 指定文件搜寻目录`
+    - `VPATH = dir:dir # 指定文件搜寻目录`
 - 决定哪些目标要重新生成
 - 执行生成命令
 
@@ -60,9 +60,9 @@ endef
 - 变量用 $(name) 引用
 - make 可以使用通配符
 - 预设变量
-  - `@` 目标文件
-  - `<` 第一个依赖文件
-  - `^` 所有依赖文件
+    - `@` 目标文件
+    - `<` 第一个依赖文件
+    - `^` 所有依赖文件
 
 ### 伪目标
 
@@ -125,10 +125,10 @@ add_compile_options ( hello PRIVATE "-Wall" )
 - `ulimit -c unlimited` 开启核心转储
 - `gdb ./a.out` 调试可执行文件
 - `gdb ./core.12345` 调试核心转储文件, 12345 是进程号
-  - `bt` 打印调用栈
-  - `info locals` 打印局部变量
-  - `info args` 打印参数
-  - `print var` 打印变量 var 的值
+    - `bt` 打印调用栈
+    - `info locals` 打印局部变量
+    - `info args` 打印参数
+    - `print var` 打印变量 var 的值
 
 ## valgrind
 

@@ -115,8 +115,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.10
+        - uses: actions/checkout@v2
+        - name: Set up Python 3.10
       uses: actions/setup-python@v2
 ```
 
