@@ -73,7 +73,7 @@
 
 > _**"C++ 是我最喜欢的垃圾回收语言, 因为它产生的垃圾最少" ---- Bjarne Stroustrup**_
 
-- [C++Prime](C++/C++Prime.md)
+- [C++Prime](C++/C++Prime.md) NOW
 - [EffectiveC++](C++/EffectiveC++.md)
 - [MoreEffectiveC++](C++/MoreEffectiveC++.md)
 - [EffectiveModernC++](C++/EffectiveModernC++.md)
@@ -93,7 +93,7 @@
 
 - [大话数据结构](算法/大话数据结构.md)
 - [算法设计与分析](算法/算法设计与分析.md)
-- [算法第四版](算法/算法第四版.md) NOW
+- [算法第四版](算法/算法第四版.md)
 - [算法理论](算法/算法理论.md) TODO
 - [算法补充](算法/算法补充.md)
 - [代码随想录](算法/代码随想录.md) NOW
@@ -110,11 +110,11 @@
 - [深入理解计算机系统](计算机系统与组成/深入理解计算机系统.md)
 - [计算机组成与设计](计算机系统与组成/计算机组成与设计.md)
 
-### 操作系统 TODO
+### 操作系统
 
 > _**"Linux 内核是一座大教堂, 而不是一个集市" ---- Linus Torvalds**_
 
-- [操作系统导论](操作系统/操作系统导论.md)
+- [操作系统导论](操作系统/操作系统导论.md) TODO
 - [Linux 内核](操作系统/Linux内核.md)
 
 ### 并行编程 TODO
@@ -162,7 +162,6 @@
 
 - [Rust](Rust/Rust.md)
 - [Go](Go/Go.md)
-- [Prolog](Prolog/Prolog.md)
 - [Haskell](Haskell/Haskell.md)
 - [Lua](Lua/Lua.md)
 

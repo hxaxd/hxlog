@@ -2,7 +2,7 @@
 
 ## 参考资料
 
-- [技术爬爬虾](https://space.bilibili.com/316183842) - 好 - 5
+- [技术爬爬虾](https://space.bilibili.com/316183842)
 
 ## API
 
