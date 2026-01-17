@@ -63,11 +63,19 @@ config.wsl_domains = {
 config.launch_menu = {
     {
       label = 'PowerShell',
-      args = { 'C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe' },
+      args = { 'pwsh.exe' },
     },
     {
       label = 'CTRL',
       args = { 'cmd.exe' },
+    },
+    {
+      label = 'PowerShell (SUDO)',
+      args = { 'sudo', 'pwsh.exe' },
+    },
+    {
+      label = 'CTRL (SUDO)',
+      args = { 'sudo', 'cmd.exe' },
     },
 }
 
