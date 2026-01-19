@@ -6,3 +6,5 @@ Import-Module -Name Microsoft.WinGet.CommandNotFound
 Import-Module -Name Terminal-Icons
 
 oh-my-posh init pwsh --config "C:\Users\hxaxd\learn\hxlog\config\powerlevel10k_rainbow.omp.json" | Invoke-Expression
+
+fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
