@@ -68,15 +68,13 @@
 
 > _**"C++ 是我最喜欢的垃圾回收语言, 因为它产生的垃圾最少" ---- Bjarne Stroustrup**_
 
+- [LearnCPP](C++/LearnCPP.md) NOW
 - [C++Prime](C++/C++Prime.md) NOW
-- [EffectiveC++](C++/EffectiveC++.md)
-- [MoreEffectiveC++](C++/MoreEffectiveC++.md)
+- [C++ 最佳实践](C++/C++最佳实践.md) NOW
 - [EffectiveModernC++](C++/EffectiveModernC++.md)
-- [EffectiveSTL](C++/EffectiveSTL.md)
 - [程序员的自我修养](C++/程序员的自我修养.md)
 - [深度探索 C++ 对象模型](C++/深度探索C++对象模型.md)
-- [STL 源码剖析](C++/STL源码剖析.md)
-- [C++ 库](C++/C++库.md)
+- [STL](C++/STL.md)
 - [C++ 工具](C++/C++工具.md)
 
 ### 算法
@@ -122,10 +120,10 @@
 - [自顶向下方法](计算机网络/自顶向下方法.md)
 - [TCPIP 详解](计算机网络/TCPIP详解.md)
 
-### 数据库 TODO
+### 数据库
 
 - [SQL 必知必会](数据库/SQL必知必会.md)
-- [Redis 设计与实现](数据库/Redis设计与实现.md)
+- [Redis 设计与实现](数据库/Redis设计与实现.md) TODO
 - [MySQL 技术内幕](数据库/MySQL技术内幕.md)
 
 ### UNIX 系统与网络编程 TODO
@@ -139,6 +137,7 @@
 
 > _**"CAP 定理告诉我们, 一致性 可用性和分区容错性在分布式系统中最多只能同时满足两个" ---- Eric Brewer**_
 
+- [分布式系统](分布式/分布式系统.md)
 - [数据密集型应用系统设计](分布式/数据密集型应用系统设计.md)
 - [系统设计](分布式/系统设计.md)
 
