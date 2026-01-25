@@ -141,7 +141,7 @@ add_compile_options ( hello PRIVATE "-Wall" )
     - 运行到某行
     - 继续: 运行程序直到下一个断点或结束
     - 设置下一行: 修改下一条要执行的代码行
-- 打印变量:
+- 打印变量 & 打印堆栈
 - `ulimit -c unlimited` 开启核心转储
 - `gdb ./a.out` 调试可执行文件
 - `gdb ./core.12345` 调试核心转储文件, 12345 是进程号
