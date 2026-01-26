@@ -23,6 +23,27 @@
     - 需要明确表示非负值的场景
     - 需要明确的环绕行为的场景
 
+## `new` 和 `delete`
+
+- `operator new` 和 `operator delete` 只分配和释放内存, 不调用构造函数和析构函数
+- 与 `malloc` 和 `free` 类似, 但更安全, 因为它们会抛出异常而不是返回空指针
+
+```C++
+void* buf {operator new(4)}; // new 为运算符, 只分配空间
+My_class* p {new(buf) My_class{}}; // 在 buf 指向的空间上构造一个 int 对象
+p->~My_class(); // 必须显式调用析构函数
+operator delete(p); // delete 也为运算符, 只释放空间
+```
+
+- `new` 和 `delete` 是关键字, 会调用构造函数和析构函数 + `operator new` 和 `operator delete`
+
+```C++
+My_class* p {new My_class{}}; // 分配空间并构造对象
+delete p; // 调用析构函数并释放空间
+```
+
+- 内存分配与构造析构都是编译时确定的, 只有数组的长度可以在运行时确定 (分配的内存块前的块表存储了已分配的相关信息)
+
 ## 小问题
 
 - 不要用父类指针遍历子类对象的数组

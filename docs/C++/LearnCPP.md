@@ -258,9 +258,42 @@ int a{}; // 值初始化
     - 引用传递编译器会考虑指针别名, 导致无法内联优化
     - `sizeof(T) <= 2 * sizeof(void*)` 时按值传递通常更快 (忽略设置开销)
 
+### 枚举
+
+- 枚举类型指类型本身, 枚举的特定值称为枚举器
+- 枚举器是隐式 `constexpr`
+- 零初始化会被初始化为 $0$, 即使该值不在枚举器列表中
+    - 最好使 $0$ 成为一个枚举器
+- 无作用域枚举指枚举器在包含枚举的作用域内可见
+    - `red` 与 `Color::red` 等价
+    - 隐式转换为整数类型 (可以指定 `enum MyEnum : char { ... };`)
+- 有作用域枚举指枚举器在枚举作用域内可见 (`enum class` 或 `enum struct`)
+    - 必须使用 `Color::red`
+    - 不隐式转换为整数类型, `std::to_underlying()` 可显式转换为整数类型
+    - `using enum MyEnum;` 导入枚举器到当前作用域
+
+## 类类型
+
+- 类类型都可以模板化
+- 类成员函数是隐式内联的
+
+### 聚合
+
+- C 风格数组 + 无构造无非 `pubilc` 成员无虚函数的类类型为聚合类型
+    - 使用 `{}` 初始化器列表初始化聚合类型, 成员按声明顺序初始化
+    - 也可以 `{.member1 = value1, .member2 = value2}` 指定成员初始化
+    - 初始化器缺失且存在默认成员初始化器使用默认值, 否则值初始化
+
+### 析构函数
+
+- 默认是 `noexcept(true)` (能抛, 但是会自动调用 `std::terminate()` 终止程序)
+    - 因为有可能某个函数抛出异常, 导致栈展开 (销毁局部变量), 触发析构函数时出现双重异常
+    - 如果析构函数可能抛出异常, 应显式声明为 `noexcept(false)`, 并且在析构函数内处理所有异常
+
 ## 模板
 
 - `auto` 函数参数的函数实际上是模板函数, 每个参数都是独立的模板参数
+- 模板别名, `template<typename T> using My_type = ...;`
 
 ### 函数模板
 
@@ -281,6 +314,12 @@ int a{}; // 值初始化
     - 浮点类型和字面量类类型
     - 空指针
     - 可以使用 `auto`
+- 模板参数可以有默认值
+- CTAD: 类模板参数推导
+    - 编译器根据构造函数参数推导模板参数类型
+    - `My_class<int> obj1;` 可简写为 `My_class obj1{...};`
+    - 独属于 C++ 17 聚合类型类模板需要推导指南 (非聚合类型的构造函数起到相同作用)
+    - 在类类型的非静态成员初始化中无法使用 CTAD
 
 ## 语句与函数
 
@@ -472,3 +511,41 @@ for (int count{ 1 }; count <= 40; ++count)
   std::cout << '\n';
 }
 ```
+
+### `std::optional`
+
+- 有可能无值, 解引用前要检查
+
+```C++
+std::optional<int> divide(int a, int b) {
+    if (b == 0) {
+        return std::nullopt; // 返回空的 optional
+    }
+    return a / b; // 返回结果
+}
+
+int main() {
+    auto result = divide(10, 2);
+    if (result) {
+        std::cout << "Result: " << *result << std::endl; // 解引用 optional 获取值
+        std::cout << "Result: " << result.value() << std::endl; // 或者使用 value() 方法获取值
+        std::cout << "Result: " << result.value_or(-1) << std::endl; // 或者使用 value_or() 提供默认值
+    } else {
+        std::cout << "Division by zero!" << std::endl;
+    }
+    return 0;
+}
+```
+
+### `std::expected`
+
+- 不可能无值, 但可能有错误
+
+### 工具
+
+- `std::numeric_limits<T>` 提供类型 `T` 的数值特性
+    - `std::numeric_limits<T>::max()` 返回类型 `T` 可表示的最大值
+    - `std::numeric_limits<T>::min()` 返回类型 `T` 可表示的最小正值 (对于整数类型, 是最小负值)
+    - `std::numeric_limits<T>::lowest()` 返回类型 `T` 可表示的最小值
+    - `std::numeric_limits<T>::is_signed` 如果类型 `T` 是有符号类型则为 true
+    - `std::numeric_limits<T>::is_integer` 如果类型 `T` 是整数类型则为 true
