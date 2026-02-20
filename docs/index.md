@@ -68,13 +68,12 @@
 
 > _**"C++ 是我最喜欢的垃圾回收语言, 因为它产生的垃圾最少" ---- Bjarne Stroustrup**_
 
-- [LearnCPP](C++/LearnCPP.md) NOW
-- [C++Prime](C++/C++Prime.md) NOW
-- [C++ 最佳实践](C++/C++最佳实践.md) NOW
-- [EffectiveModernC++](C++/EffectiveModernC++.md)
+- [LearnCPP](C++/LearnCPP.md)
+- [C++Prime](C++/C++Prime.md)
+- [C++ 最佳实践](C++/C++最佳实践.md)
 - [程序员的自我修养](C++/程序员的自我修养.md)
 - [深度探索 C++ 对象模型](C++/深度探索C++对象模型.md)
-- [STL](C++/STL.md)
+- [STL](C++/STL.md) TODO
 - [C++ 工具](C++/C++工具.md)
 
 ### 算法
