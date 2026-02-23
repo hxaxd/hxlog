@@ -31,3 +31,15 @@
 ### 禁止栈 / 堆分配
 
 ### 限制对象的数量
+
+### 判断大小端
+
+```C++
+#include <iostream>
+
+bool isLittleEndian() {
+    uint16_t num = 0x1; // 16-bit number with the least significant byte set to 1
+    char* bytePtr = reinterpret_cast<char*>(&num); // Interpret the address of num as a char pointer
+    return bytePtr[0] == 1; // Check if the first byte is 1 (little-endian)
+}
+```
